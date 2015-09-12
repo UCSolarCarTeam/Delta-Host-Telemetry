@@ -87,6 +87,7 @@ public:
     QPushButton& batteryGraphButton();
 
     QStackedWidget& setGraphsStackedWidget();
+    /*
     QwtPlotCurve& setPositiveBusCurrentCurve(); 
     QwtPlotCurve& setNegativeBusCurrentCurve(); 
     QwtPlotCurve& setBusVoltageCurve(); 
@@ -101,11 +102,12 @@ public:
     QwtPlotCurve& setMaxCellVoltageCurve();
     QwtPlotCurve& setMinCellVoltageCurve();
     QwtPlotCurve& setAvgCellVoltageCurve();
-    QwtPlotCurve& setBatteryPowerCurve();
+    QwtPlotCurve& setBatteryPowerCurve();*/
     
 private:
    Ui::PowerUI *ui_;
    QList<QLabel*> batteryCMUCellVoltageLabels_;
+   /*
    QwtPlotCurve* positiveBusCurrentCurve_;
    QwtPlotCurve* negativeBusCurrentCurve_;
    QwtPlotCurve* busVoltageCurve_;
@@ -120,7 +122,7 @@ private:
    QwtPlotCurve* maxCellVoltageCurve_;
    QwtPlotCurve* minCellVoltageCurve_;
    QwtPlotCurve* avgCellVoltageCurve_;
-   QwtPlotCurve* batteryPowerCurve_;
+   QwtPlotCurve* batteryPowerCurve_;*/
    void setupGraphs();
 
 };

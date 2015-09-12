@@ -1,6 +1,6 @@
 #include "PowerUI.h"
 #include "ui_PowerUI.h"
-#include <qwt_legend.h>
+//#include <qwt_legend.h>
 #include <QDebug>
 
 
@@ -45,7 +45,7 @@ PowerUI::PowerUI()
     batteryCMUCellVoltageLabels_.append(ui_->batteryCMU4Cell7Voltage);
     batteryCMUCellVoltageLabels_.append(ui_->batteryCMU4Cell8Voltage);
 
-    positiveBusCurrentCurve_ = new QwtPlotCurve("Positive Bus Current");
+    /*positiveBusCurrentCurve_ = new QwtPlotCurve("Positive Bus Current");
     negativeBusCurrentCurve_ = new QwtPlotCurve("Negative Bus Current");
     busVoltageCurve_ = new QwtPlotCurve("Bus Voltage");
     busPowerCurve_ = new QwtPlotCurve("Bus Power");
@@ -59,7 +59,7 @@ PowerUI::PowerUI()
     maxCellVoltageCurve_ = new QwtPlotCurve("Max");
     minCellVoltageCurve_ = new QwtPlotCurve("Min");
     avgCellVoltageCurve_ = new QwtPlotCurve("Avg");
-    batteryPowerCurve_ = new QwtPlotCurve("Battery Power");
+    batteryPowerCurve_ = new QwtPlotCurve("Battery Power");*/
     setupGraphs();
 }
 
@@ -335,7 +335,7 @@ QStackedWidget& PowerUI::setGraphsStackedWidget()
 {
     return *ui_->graphsStackedWidget;
 }
-QwtPlotCurve& PowerUI::setPositiveBusCurrentCurve()
+/*QwtPlotCurve& PowerUI::setPositiveBusCurrentCurve()
 {
     return *positiveBusCurrentCurve_;
 } 
@@ -394,7 +394,7 @@ QwtPlotCurve& PowerUI::setAvgCellVoltageCurve()
 QwtPlotCurve& PowerUI::setBatteryPowerCurve()
 {
     return *batteryPowerCurve_;
-}
+}*/
 
 void PowerUI::setupGraphs()
 {
@@ -409,7 +409,7 @@ void PowerUI::setupGraphs()
 
     int MAX_SECONDS_ELAPSED = 60; 
 
-    ui_->busCurrentGraph->setTitle("Bus Current Graph");
+    /*ui_->busCurrentGraph->setTitle("Bus Current Graph");
     ui_->busCurrentGraph->setAxisTitle(QwtPlot::yLeft, "Current (A)");
     ui_->busCurrentGraph->setAxisScale(QwtPlot::yLeft, 0, MAX_BUS_CURRENT, MAX_BUS_CURRENT/5);
     ui_->busCurrentGraph->setAxisTitle(QwtPlot::xBottom, "Time Elapsed (s)");
@@ -501,5 +501,5 @@ void PowerUI::setupGraphs()
     batteryPowerCurve_->setPen(*new QPen(Qt::yellow));
     batteryPowerCurve_->attach(ui_->batteryPowerGraph);
     // QwtLegend* batteryPowerGraphLegend = new QwtLegend;
-    // ui_->batteryPowerGraph->insertLegend(batteryPowerGraphLegend, QwtPlot::RightLegend);
+    // ui_->batteryPowerGraph->insertLegend(batteryPowerGraphLegend, QwtPlot::RightLegend);*/
 }
