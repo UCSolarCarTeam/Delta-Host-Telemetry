@@ -1,6 +1,6 @@
 #pragma once
 
-#include "qwt_plot.h"
+//#include "qwt_plot.h"
 #include <QComboBox>
 #include <QLabel>
 #include <QPushButton>
@@ -9,7 +9,7 @@
 #include <QSpinBox>
 #include <QStackedWidget>
 #include <QWidget>
-#include <qwt_plot_curve.h>
+//#include <qwt_plot_curve.h>
 
 class I_PowerUI
 {
@@ -87,6 +87,7 @@ public:
     virtual QPushButton& batteryGraphButton() = 0;
 
     virtual QStackedWidget& setGraphsStackedWidget() = 0;
+    /*
     virtual QwtPlotCurve& setPositiveBusCurrentCurve() = 0; 
     virtual QwtPlotCurve& setNegativeBusCurrentCurve() = 0; 
     virtual QwtPlotCurve& setBusVoltageCurve() = 0; 
@@ -101,5 +102,5 @@ public:
     virtual QwtPlotCurve& setMaxCellVoltageCurve() = 0;
     virtual QwtPlotCurve& setMinCellVoltageCurve() = 0;
     virtual QwtPlotCurve& setAvgCellVoltageCurve() = 0;
-    virtual QwtPlotCurve& setBatteryPowerCurve() = 0;
+    virtual QwtPlotCurve& setBatteryPowerCurve() = 0;*/
 };
