@@ -2387,26 +2387,10 @@ background: none;
 }</string>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>2</number>
                </property>
                <widget class="QWidget" name="busGraphsPage">
                 <layout class="QVBoxLayout" name="verticalLayout">
-                 <item>
-                  <widget class="QwtPlot" name="busCurrentGraph">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>100</height>
-                    </size>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">border: none;</string>
-                   </property>
-                   <property name="autoReplot" stdset="0">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
                  <item>
                   <widget class="Line" name="busGraphLine_2">
                    <property name="sizePolicy">
@@ -2427,22 +2411,6 @@ border: none;</string>
                    </property>
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QwtPlot" name="busVoltageGraph">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>100</height>
-                    </size>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">border: none;</string>
-                   </property>
-                   <property name="autoReplot" stdset="0">
-                    <bool>true</bool>
                    </property>
                   </widget>
                  </item>
@@ -2469,42 +2437,10 @@ border: none;</string>
                    </property>
                   </widget>
                  </item>
-                 <item>
-                  <widget class="QwtPlot" name="busPowerGraph">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>100</height>
-                    </size>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">border: none;</string>
-                   </property>
-                   <property name="autoReplot" stdset="0">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
                 </layout>
                </widget>
                <widget class="QWidget" name="driverGraphsPage">
                 <layout class="QVBoxLayout" name="verticalLayout_2">
-                 <item>
-                  <widget class="QwtPlot" name="driverCurrentGraph">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>100</height>
-                    </size>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">border: none;</string>
-                   </property>
-                   <property name="autoReplot" stdset="0">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
                  <item>
                   <widget class="Line" name="driverGraphLine">
                    <property name="sizePolicy">
@@ -2528,42 +2464,10 @@ border: none;</string>
                    </property>
                   </widget>
                  </item>
-                 <item>
-                  <widget class="QwtPlot" name="driverSpeedGraph">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>100</height>
-                    </size>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">border: none;</string>
-                   </property>
-                   <property name="autoReplot" stdset="0">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
                 </layout>
                </widget>
                <widget class="QWidget" name="batteryGraphsPage">
                 <layout class="QVBoxLayout" name="verticalLayout_3">
-                 <item>
-                  <widget class="QwtPlot" name="batteryCellTempGraph">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>100</height>
-                    </size>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">border: none;</string>
-                   </property>
-                   <property name="autoReplot" stdset="0">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
                  <item>
                   <widget class="Line" name="batteryGraphLine">
                    <property name="sizePolicy">
@@ -2588,22 +2492,6 @@ border: none;</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QwtPlot" name="batteryCellVoltageGraph">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>100</height>
-                    </size>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">border: none;</string>
-                   </property>
-                   <property name="autoReplot" stdset="0">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
                   <widget class="Line" name="batteryGraphLine_3">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -2623,22 +2511,6 @@ border: none;</string>
                    </property>
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QwtPlot" name="batteryPowerGraph">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>100</height>
-                    </size>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">border: none;</string>
-                   </property>
-                   <property name="autoReplot" stdset="0">
-                    <bool>true</bool>
                    </property>
                   </widget>
                  </item>
@@ -2721,14 +2593,6 @@ border: none;</string>
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>QwtPlot</class>
-   <extends>QFrame</extends>
-   <header>qwt_plot.h</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <resources>
   <include location="uiresources.qrc"/>
  </resources>
