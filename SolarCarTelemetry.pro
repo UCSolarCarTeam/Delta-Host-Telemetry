@@ -86,7 +86,8 @@ SOURCES += \
     ViewLayer/PlaybackView/PlaybackView.cpp \
     ViewLayer/PowerUI/PowerUI.cpp \
     ViewLayer/PowerView/PowerView.cpp \
-    ViewLayer/ViewContainer.cpp
+    ViewLayer/ViewContainer.cpp \
+    compactui.cpp
 
 HEADERS  += \
     BusinessLayer/BusinessContainer.h \
@@ -172,7 +173,8 @@ HEADERS  += \
     ViewLayer/PowerUI/I_PowerUI.h \
     ViewLayer/PowerUI/PowerUI.h \
     ViewLayer/PowerView/PowerView.h \
-    PresenterLayer/GraphsPresenter/I_PowerGraphsPresenter.h
+    PresenterLayer/GraphsPresenter/I_PowerGraphsPresenter.h \
+    compactui.h
 
 FORMS    += \
     EscapeDialog.ui \
@@ -180,7 +182,8 @@ FORMS    += \
     MpptUI.ui \
     PlaybackUI.ui \
     PowerUI.ui \
-    SolarCarTestUI.ui
+    SolarCarTestUI.ui \
+    compactui.ui
 
 RESOURCES += \
     uiresources.qrc
