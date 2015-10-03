@@ -14,7 +14,9 @@ public:
    void setSerialParameters(QString serialPortName, int baudRate);
    bool connectToDataSource();
    void disconnectFromDataSource();
+   bool connectionStatus();
 
 private:
    QSerialPort& serialPort_;
+   bool connectionStatus_;
 };
