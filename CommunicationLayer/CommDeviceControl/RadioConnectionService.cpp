@@ -1,8 +1,18 @@
 #include "RadioConnectionService.h"
+#include <QDebug>
+
+namespace
+{
+   // const QString DEFAULT_PORT_NAME = "/dev/ttyUSB0";
+   const QString DEFAULT_PORT_NAME = "COM5";
+   const int DEFAULT_BAUDRATE = 9600;
+}
 
 RadioConnectionService::RadioConnectionService(QSerialPort& serialPort)
 : serialPort_(serialPort)
 {
+   setSerialParameters(DEFAULT_PORT_NAME, DEFAULT_BAUDRATE);
+   connectToDataSource();
 }
 
 RadioConnectionService::~RadioConnectionService()
