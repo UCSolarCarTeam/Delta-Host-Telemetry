@@ -3,8 +3,8 @@
 
 namespace
 {
-   // const QString DEFAULT_PORT_NAME = "/dev/ttyUSB0";
-   const QString DEFAULT_PORT_NAME = "COM5";
+   const QString DEFAULT_PORT_NAME = "/dev/ttyAMA0";
+   // const QString DEFAULT_PORT_NAME = "COM5";
    const int DEFAULT_BAUDRATE = 9600;
 }
 
