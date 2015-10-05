@@ -12,7 +12,7 @@ RadioConnectionService::RadioConnectionService(QSerialPort& serialPort)
 : serialPort_(serialPort)
 {
    setSerialParameters(DEFAULT_PORT_NAME, DEFAULT_BAUDRATE);
-   connectionStatus_ = connectToDataSource();
+   connectToDataSource();
 }
 
 RadioConnectionService::~RadioConnectionService()
@@ -44,9 +44,4 @@ void RadioConnectionService::disconnectFromDataSource()
 {
    serialPort_.close();
    emit connectionFailed("DISCONNECTED");
-}
-
-bool RadioConnectionService::connectionStatus()
-{
-   return connectionStatus_;
 }
