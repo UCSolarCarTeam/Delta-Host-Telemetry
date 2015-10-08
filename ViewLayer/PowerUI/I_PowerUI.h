@@ -34,7 +34,7 @@ public:
 
     virtual QLabel& setSetSpeed() = 0;
     virtual QLabel& setSetCurrent() = 0;
-    virtual QLabel& setActualSpeed() = 0;    
+    virtual QLabel& setActualSpeed() = 0;
     virtual QLabel& setBusCurrent() = 0;
     virtual QLabel& setBusVoltage() = 0;
     virtual QLabel& setBatteryCurrent() = 0;

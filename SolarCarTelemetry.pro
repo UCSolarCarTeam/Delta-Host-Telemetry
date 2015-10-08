@@ -65,29 +65,16 @@ SOURCES += \
     PresenterLayer/BatteryPresenter/BatteryPresenter.cpp \
     PresenterLayer/CommunicationPresenter/CommunicationPresenter.cpp \
     PresenterLayer/FaultsPresenter/FaultsPresenter.cpp \
-    PresenterLayer/GraphsPresenter/PowerGraphData.cpp \
-    PresenterLayer/GraphsPresenter/PowerGraphsPresenter.cpp \
     PresenterLayer/MpptPresenter/MpptPresenter.cpp \
-    PresenterLayer/PlaybackPresenter/PlaybackPresenter.cpp \
     PresenterLayer/PowerPresenter/PowerPresenter.cpp \
     PresenterLayer/PresenterContainer.cpp \
     PresenterLayer/VehiclePresenter/VehiclePresenter.cpp \
     SolarCarTelemetry/main.cpp \
     SolarCarTelemetry/SolarCarTelemetry.cpp \
     ViewLayer/DisplayView/DisplayView.cpp \
-    ViewLayer/EscapeDialog/EscapeDialog.cpp \
-    ViewLayer/EscapeDialogView/EscapeDialogView.cpp \
-    ViewLayer/FaultsUI/FaultsUI.cpp \
-    ViewLayer/FaultsView/FaultsView.cpp \
-    ViewLayer/MpptUI/MpptUI.cpp \
-    ViewLayer/MpptView/MpptView.cpp \
-    ViewLayer/OverlordWidget/OverlordWidget.cpp \
-    ViewLayer/PlaybackUI/PlaybackUI.cpp \
-    ViewLayer/PlaybackView/PlaybackView.cpp \
-    ViewLayer/PowerUI/PowerUI.cpp \
-    ViewLayer/PowerView/PowerView.cpp \
     ViewLayer/ViewContainer.cpp \
-    compactui.cpp
+    ViewLayer/CompactUI/CompactUI.cpp \
+    ViewLayer/CompactView/CompactView.cpp
 
 HEADERS  += \
     BusinessLayer/BusinessContainer.h \
@@ -145,36 +132,16 @@ HEADERS  += \
     PresenterLayer/BatteryPresenter/BatteryPresenter.h \
     PresenterLayer/CommunicationPresenter/CommunicationPresenter.h \
     PresenterLayer/FaultsPresenter/FaultsPresenter.h \
-    PresenterLayer/GraphsPresenter/I_GraphsPresenter.h \
-    PresenterLayer/GraphsPresenter/PowerGraphData.h \
-    PresenterLayer/GraphsPresenter/PowerGraphsPresenter.h \
     PresenterLayer/MpptPresenter/MpptPresenter.h \
-    PresenterLayer/PlaybackPresenter/PlaybackPresenter.h \
     PresenterLayer/PowerPresenter/PowerPresenter.h \
     PresenterLayer/PresenterContainer.h \
     PresenterLayer/VehiclePresenter/VehiclePresenter.h \
     SolarCarTelemetry/SolarCarTelemetry.h \
     ViewLayer/DisplayView/DisplayView.h \
-    ViewLayer/EscapeDialog/EscapeDialog.h \
-    ViewLayer/EscapeDialog/I_EscapeDialog.h \
-    ViewLayer/EscapeDialogView/EscapeDialogView.h \
-    ViewLayer/FaultsUI/FaultsUI.h \
-    ViewLayer/FaultsUI/I_FaultsUI.h \
-    ViewLayer/FaultsView/FaultsView.h \
     ViewLayer/I_SolarCarWindow/I_SolarCarWindow.h \
-    ViewLayer/MpptUI/I_MpptUI.h \
-    ViewLayer/MpptUI/MpptUI.h \
-    ViewLayer/MpptView/MpptView.h \
-    ViewLayer/OverlordWidget/I_OverlordWidget.h \
-    ViewLayer/OverlordWidget/OverlordWidget.h \
-    ViewLayer/PlaybackUI/I_PlaybackUI.h \
-    ViewLayer/PlaybackUI/PlaybackUI.h \
-    ViewLayer/PlaybackView/PlaybackView.h \
-    ViewLayer/PowerUI/I_PowerUI.h \
-    ViewLayer/PowerUI/PowerUI.h \
-    ViewLayer/PowerView/PowerView.h \
-    PresenterLayer/GraphsPresenter/I_PowerGraphsPresenter.h \
-    compactui.h
+    ViewLayer/CompactUI/CompactUI.h \
+    ViewLayer/CompactView/CompactView.h \
+    ViewLayer/CompactUI/I_CompactUI.h
 
 FORMS    += \
     EscapeDialog.ui \
@@ -183,7 +150,7 @@ FORMS    += \
     PlaybackUI.ui \
     PowerUI.ui \
     SolarCarTestUI.ui \
-    compactui.ui
+    CompactUI.ui
 
 RESOURCES += \
     uiresources.qrc

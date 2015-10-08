@@ -26,11 +26,6 @@ PresenterContainer::PresenterContainer(DataContainer& dataContainer,
 , mpptPresenter_(new MpptPresenter(dataContainer.mpptData()))
 , powerPresenter_(new PowerPresenter(dataContainer.powerData()))
 , faultsPresenter_(new FaultsPresenter(dataContainer.faultsData()))
-, powerGraphsPresenter_(new PowerGraphsPresenter(dataContainer.vehicleData(),
-   dataContainer.powerData(),
-   dataContainer.batteryData()))
-, playbackPresenter_(new PlaybackPresenter(
-   businessContainer.playbackService()))
 {
 }
 
@@ -68,12 +63,3 @@ FaultsPresenter& PresenterContainer::faultsPresenter()
 	return *faultsPresenter_;
 }
 
-PowerGraphsPresenter& PresenterContainer::powerGraphsPresenter()
-{
-	return *powerGraphsPresenter_;
-}
-
-PlaybackPresenter& PresenterContainer::playbackPresenter()
-{
-   return *playbackPresenter_;
-}

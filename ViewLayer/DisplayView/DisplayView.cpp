@@ -1,7 +1,7 @@
 #include "DisplayView.h"
-#include "../OverlordWidget/OverlordWidget.h"
+#include "../CompactUI/CompactUI.h"
 
-DisplayView::DisplayView(OverlordWidget& ui)
+DisplayView::DisplayView(CompactUI& ui)
 : ui_(ui)
 {
     ui_.show();
