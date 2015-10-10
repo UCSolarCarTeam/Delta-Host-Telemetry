@@ -128,4 +128,7 @@ private slots:
     void mppt7CurrentInReceived(double);
     void mppt7VoltageOutReceived(double);
     void mppt7CurrentOutReceived(double);
+
+    void connectionFailed(QString);
+    void connectionSucceeded();
 };

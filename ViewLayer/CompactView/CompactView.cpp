@@ -126,6 +126,11 @@ CompactView::CompactView(BatteryPresenter& batteryPresenter,
     connect(&batteryPresenter_, SIGNAL(mod3CellVoltagesReceived(QList<double>)),
             this, SLOT(highlightMinMaxVoltages()));
 
+    connect(&communicationPresenter_, SIGNAL(connectionSucceeded()),
+            this, SLOT(connectionSucceeded()));
+    connect(&communicationPresenter_, SIGNAL(connectionFailed(QString)),
+            this, SLOT(connectionFailed(QString)));
+
 }
 CompactView::~CompactView()
 {
@@ -808,4 +813,14 @@ void CompactView::highlightUntrustedVoltages()
     }
 }
 
+void CompactView::connectionFailed(QString failureMessage)
+{
+    ui_.setInputSerialConnectionStatus().setText(failureMessage);
+    ui_.setInputSerialConnectionStatus().setStyleSheet("text-align: centre; color: rgb(255, 40, 40); background-color: rgb(70,70,70);"); // red text
+}
 
+void CompactView::connectionSucceeded()
+{
+    ui_.setInputSerialConnectionStatus().setText("Connected");
+    ui_.setInputSerialConnectionStatus().setStyleSheet("text-align: centre; color: rgb(0, 255, 0); background-color: rgb(70,70,70);");
+}
