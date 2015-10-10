@@ -15,6 +15,7 @@ ViewContainer::ViewContainer(PresenterContainer& presenterContainer)
       presenterContainer.faultsPresenter(),
       presenterContainer.mpptPresenter(),
       *compactUI_))
+, displayView_(new DisplayView(*compactUI_))
 {
 }
 

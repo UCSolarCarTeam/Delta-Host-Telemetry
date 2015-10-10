@@ -5,7 +5,7 @@
 #include "../../PresenterLayer/VehiclePresenter/VehiclePresenter.h"
 #include "../../PresenterLayer/MpptPresenter/MpptPresenter.h"
 #include "../../PresenterLayer/FaultsPresenter/FaultsPresenter.h"
-#include "../MpptUI/MpptUI.h"
+#include "../CompactUI/CompactUI.h"
 #include <QDateTime>
 
 CompactView::CompactView(BatteryPresenter& batteryPresenter,
@@ -23,67 +23,67 @@ CompactView::CompactView(BatteryPresenter& batteryPresenter,
   , mpptPresenter_(mpptPresenter)
   , ui_(ui)
 {
-   connect(&faultsPresenter_, SIGNAL(mppt1VoltageInReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt1VoltageInReceived(double)),
       this, SLOT(mppt1VoltageInReceived(double)));
-   connect(&faultsPresenter_, SIGNAL(mppt1CurrentInReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt1CurrentInReceived(double)),
       this, SLOT(mppt1CurrentInReceived(double)));
-   connect(&faultsPresenter_, SIGNAL(mppt1VoltageOutReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt1VoltageOutReceived(double)),
       this, SLOT(mppt1VoltageOutReceived(double)));
-   connect(&faultsPresenter_, SIGNAL(mppt1CurrentOutReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt1CurrentOutReceived(double)),
       this, SLOT(mppt1CurrentOutReceived(double)));
 
-   connect(&faultsPresenter_, SIGNAL(mppt2VoltageInReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt2VoltageInReceived(double)),
       this, SLOT(mppt2VoltageInReceived(double)));
-   connect(&faultsPresenter_, SIGNAL(mppt2CurrentInReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt2CurrentInReceived(double)),
       this, SLOT(mppt2CurrentInReceived(double)));
-   connect(&faultsPresenter_, SIGNAL(mppt2VoltageOutReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt2VoltageOutReceived(double)),
       this, SLOT(mppt2VoltageOutReceived(double)));
-   connect(&faultsPresenter_, SIGNAL(mppt2CurrentOutReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt2CurrentOutReceived(double)),
       this, SLOT(mppt2CurrentOutReceived(double)));
 
-   connect(&faultsPresenter_, SIGNAL(mppt3VoltageInReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt3VoltageInReceived(double)),
       this, SLOT(mppt3VoltageInReceived(double)));
-   connect(&faultsPresenter_, SIGNAL(mppt3CurrentInReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt3CurrentInReceived(double)),
       this, SLOT(mppt3CurrentInReceived(double)));
-   connect(&faultsPresenter_, SIGNAL(mppt3VoltageOutReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt3VoltageOutReceived(double)),
       this, SLOT(mppt3VoltageOutReceived(double)));
-   connect(&faultsPresenter_, SIGNAL(mppt3CurrentOutReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt3CurrentOutReceived(double)),
       this, SLOT(mppt3CurrentOutReceived(double)));
 
-   connect(&faultsPresenter_, SIGNAL(mppt4VoltageInReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt4VoltageInReceived(double)),
       this, SLOT(mppt4VoltageInReceived(double)));
-   connect(&faultsPresenter_, SIGNAL(mppt4CurrentInReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt4CurrentInReceived(double)),
       this, SLOT(mppt4CurrentInReceived(double)));
-   connect(&faultsPresenter_, SIGNAL(mppt4VoltageOutReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt4VoltageOutReceived(double)),
       this, SLOT(mppt4VoltageOutReceived(double)));
-   connect(&faultsPresenter_, SIGNAL(mppt4CurrentOutReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt4CurrentOutReceived(double)),
       this, SLOT(mppt4CurrentOutReceived(double)));
 
-   connect(&faultsPresenter_, SIGNAL(mppt5VoltageInReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt5VoltageInReceived(double)),
       this, SLOT(mppt5VoltageInReceived(double)));
-   connect(&faultsPresenter_, SIGNAL(mppt5CurrentInReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt5CurrentInReceived(double)),
       this, SLOT(mppt5CurrentInReceived(double)));
-   connect(&faultsPresenter_, SIGNAL(mppt5VoltageOutReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt5VoltageOutReceived(double)),
       this, SLOT(mppt5VoltageOutReceived(double)));
-   connect(&faultsPresenter_, SIGNAL(mppt5CurrentOutReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt5CurrentOutReceived(double)),
       this, SLOT(mppt5CurrentOutReceived(double)));
 
-   connect(&faultsPresenter_, SIGNAL(mppt6VoltageInReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt6VoltageInReceived(double)),
       this, SLOT(mppt6VoltageInReceived(double)));
-   connect(&faultsPresenter_, SIGNAL(mppt6CurrentInReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt6CurrentInReceived(double)),
       this, SLOT(mppt6CurrentInReceived(double)));
-   connect(&faultsPresenter_, SIGNAL(mppt6VoltageOutReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt6VoltageOutReceived(double)),
       this, SLOT(mppt6VoltageOutReceived(double)));
-   connect(&faultsPresenter_, SIGNAL(mppt6CurrentOutReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt6CurrentOutReceived(double)),
       this, SLOT(mppt6CurrentOutReceived(double)));
 
-   connect(&faultsPresenter_, SIGNAL(mppt7VoltageInReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt7VoltageInReceived(double)),
       this, SLOT(mppt7VoltageInReceived(double)));
-   connect(&faultsPresenter_, SIGNAL(mppt7CurrentInReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt7CurrentInReceived(double)),
       this, SLOT(mppt7CurrentInReceived(double)));
-   connect(&faultsPresenter_, SIGNAL(mppt7VoltageOutReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt7VoltageOutReceived(double)),
       this, SLOT(mppt7VoltageOutReceived(double)));
-   connect(&faultsPresenter_, SIGNAL(mppt7CurrentOutReceived(double)),
+   connect(&mpptPresenter_, SIGNAL(mppt7CurrentOutReceived(double)),
       this, SLOT(mppt7CurrentOutReceived(double)));
 
     connect(&vehiclePresenter_, SIGNAL(driverSetSpeedMetersPerSecondReceived(double)),
@@ -100,17 +100,6 @@ CompactView::CompactView(BatteryPresenter& batteryPresenter,
             this, SLOT(batteryCurrentReceived(double)));
     connect(&batteryPresenter_, SIGNAL(batteryVoltageReceived(double)),
             this, SLOT(batteryVoltageReceived(double)));
-
-    connect(&communicationPresenter_, SIGNAL(secondsSinceLastPacketReceivedUpdated(int)),
-            this, SLOT(secondsSinceLastPacketUpdated(int)));
-    connect(&communicationPresenter_, SIGNAL(packetsReceivedInLastMinuteUpdated(int)),
-            this, SLOT(packetInLastMinuteUpdated(int)));
-    connect(&communicationPresenter_, SIGNAL(secondsSinceLastValidPacketReceivedUpdated(int)),
-            this, SLOT(secondsSinceLastValidPacketUpdated(int)));
-    connect(&communicationPresenter_, SIGNAL(validPacketsReceivedInLastMinuteUpdated(int)),
-            this, SLOT(validPacketsInLastMinuteUpdated(int)));
-    connect(&communicationPresenter_, SIGNAL(invalidPacketsReceivedInLastMinuteUpdated(int)),
-            this, SLOT(invalidPacketsInLastMinuteUpdated(int)));
 
     connect(&batteryPresenter_, SIGNAL(mod0CellTemperatureReceived(double)),
             this, SLOT(mod0CellTemperatureReceived(double)));
