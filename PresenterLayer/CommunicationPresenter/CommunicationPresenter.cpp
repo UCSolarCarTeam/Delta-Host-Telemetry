@@ -25,6 +25,7 @@ CommunicationPresenter::CommunicationPresenter(
 {
    relayPacketInformation();
    relayConnectionStatus();
+   connectToDataSource(CommDefines::Serial);
 }
 
 
