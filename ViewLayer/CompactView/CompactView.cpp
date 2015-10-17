@@ -23,68 +23,54 @@ CompactView::CompactView(BatteryPresenter& batteryPresenter,
   , mpptPresenter_(mpptPresenter)
   , ui_(ui)
 {
-   connect(&mpptPresenter_, SIGNAL(mppt1VoltageInReceived(double)),
-      this, SLOT(mppt1VoltageInReceived(double)));
-   connect(&mpptPresenter_, SIGNAL(mppt1CurrentInReceived(double)),
-      this, SLOT(mppt1CurrentInReceived(double)));
-   connect(&mpptPresenter_, SIGNAL(mppt1VoltageOutReceived(double)),
-      this, SLOT(mppt1VoltageOutReceived(double)));
-   connect(&mpptPresenter_, SIGNAL(mppt1CurrentOutReceived(double)),
-      this, SLOT(mppt1CurrentOutReceived(double)));
+   connect(&mpptPresenter_, SIGNAL(mppt1PowerInReceived(double)),
+      this, SLOT(mppt1PowerInReceived(double)));
+   connect(&mpptPresenter_, SIGNAL(mppt1PowerOutReceived(double)),
+      this, SLOT(mppt1PowerOutReceived(double)));
+   connect(&mpptPresenter_, SIGNAL(mppt1EfficiencyReceived(double)),
+      this, SLOT(mppt1EfficiencyReceived(double)));
 
-   connect(&mpptPresenter_, SIGNAL(mppt2VoltageInReceived(double)),
-      this, SLOT(mppt2VoltageInReceived(double)));
-   connect(&mpptPresenter_, SIGNAL(mppt2CurrentInReceived(double)),
-      this, SLOT(mppt2CurrentInReceived(double)));
-   connect(&mpptPresenter_, SIGNAL(mppt2VoltageOutReceived(double)),
-      this, SLOT(mppt2VoltageOutReceived(double)));
-   connect(&mpptPresenter_, SIGNAL(mppt2CurrentOutReceived(double)),
-      this, SLOT(mppt2CurrentOutReceived(double)));
+   connect(&mpptPresenter_, SIGNAL(mppt2PowerInReceived(double)),
+      this, SLOT(mppt2PowerInReceived(double)));
+   connect(&mpptPresenter_, SIGNAL(mppt2PowerOutReceived(double)),
+      this, SLOT(mppt2PowerOutReceived(double)));
+   connect(&mpptPresenter_, SIGNAL(mppt2EfficiencyReceived(double)),
+      this, SLOT(mppt2EfficiencyReceived(double)));
 
-   connect(&mpptPresenter_, SIGNAL(mppt3VoltageInReceived(double)),
-      this, SLOT(mppt3VoltageInReceived(double)));
-   connect(&mpptPresenter_, SIGNAL(mppt3CurrentInReceived(double)),
-      this, SLOT(mppt3CurrentInReceived(double)));
-   connect(&mpptPresenter_, SIGNAL(mppt3VoltageOutReceived(double)),
-      this, SLOT(mppt3VoltageOutReceived(double)));
-   connect(&mpptPresenter_, SIGNAL(mppt3CurrentOutReceived(double)),
-      this, SLOT(mppt3CurrentOutReceived(double)));
+   connect(&mpptPresenter_, SIGNAL(mppt3PowerInReceived(double)),
+      this, SLOT(mppt3PowerInReceived(double)));
+   connect(&mpptPresenter_, SIGNAL(mppt3PowerOutReceived(double)),
+      this, SLOT(mppt3PowerOutReceived(double)));
+   connect(&mpptPresenter_, SIGNAL(mppt3EfficiencyReceived(double)),
+      this, SLOT(mppt3EfficiencyReceived(double)));
 
-   connect(&mpptPresenter_, SIGNAL(mppt4VoltageInReceived(double)),
-      this, SLOT(mppt4VoltageInReceived(double)));
-   connect(&mpptPresenter_, SIGNAL(mppt4CurrentInReceived(double)),
-      this, SLOT(mppt4CurrentInReceived(double)));
-   connect(&mpptPresenter_, SIGNAL(mppt4VoltageOutReceived(double)),
-      this, SLOT(mppt4VoltageOutReceived(double)));
-   connect(&mpptPresenter_, SIGNAL(mppt4CurrentOutReceived(double)),
-      this, SLOT(mppt4CurrentOutReceived(double)));
+   connect(&mpptPresenter_, SIGNAL(mppt4PowerInReceived(double)),
+      this, SLOT(mppt4PowerInReceived(double)));
+   connect(&mpptPresenter_, SIGNAL(mppt4PowerOutReceived(double)),
+      this, SLOT(mppt4PowerOutReceived(double)));
+   connect(&mpptPresenter_, SIGNAL(mppt4EfficiencyReceived(double)),
+      this, SLOT(mppt4EfficiencyReceived(double)));
 
-   connect(&mpptPresenter_, SIGNAL(mppt5VoltageInReceived(double)),
-      this, SLOT(mppt5VoltageInReceived(double)));
-   connect(&mpptPresenter_, SIGNAL(mppt5CurrentInReceived(double)),
-      this, SLOT(mppt5CurrentInReceived(double)));
-   connect(&mpptPresenter_, SIGNAL(mppt5VoltageOutReceived(double)),
-      this, SLOT(mppt5VoltageOutReceived(double)));
-   connect(&mpptPresenter_, SIGNAL(mppt5CurrentOutReceived(double)),
-      this, SLOT(mppt5CurrentOutReceived(double)));
+   connect(&mpptPresenter_, SIGNAL(mppt5PowerInReceived(double)),
+      this, SLOT(mppt5PowerInReceived(double)));
+   connect(&mpptPresenter_, SIGNAL(mppt5PowerOutReceived(double)),
+      this, SLOT(mppt5PowerOutReceived(double)));
+   connect(&mpptPresenter_, SIGNAL(mppt5EfficiencyReceived(double)),
+      this, SLOT(mppt5EfficiencyReceived(double)));
 
-   connect(&mpptPresenter_, SIGNAL(mppt6VoltageInReceived(double)),
-      this, SLOT(mppt6VoltageInReceived(double)));
-   connect(&mpptPresenter_, SIGNAL(mppt6CurrentInReceived(double)),
-      this, SLOT(mppt6CurrentInReceived(double)));
-   connect(&mpptPresenter_, SIGNAL(mppt6VoltageOutReceived(double)),
-      this, SLOT(mppt6VoltageOutReceived(double)));
-   connect(&mpptPresenter_, SIGNAL(mppt6CurrentOutReceived(double)),
-      this, SLOT(mppt6CurrentOutReceived(double)));
+   connect(&mpptPresenter_, SIGNAL(mppt6PowerInReceived(double)),
+      this, SLOT(mppt6PowerInReceived(double)));
+   connect(&mpptPresenter_, SIGNAL(mppt6PowerOutReceived(double)),
+      this, SLOT(mppt6PowerOutReceived(double)));
+   connect(&mpptPresenter_, SIGNAL(mppt6EfficiencyReceived(double)),
+      this, SLOT(mppt6EfficiencyReceived(double)));
 
-   connect(&mpptPresenter_, SIGNAL(mppt7VoltageInReceived(double)),
-      this, SLOT(mppt7VoltageInReceived(double)));
-   connect(&mpptPresenter_, SIGNAL(mppt7CurrentInReceived(double)),
-      this, SLOT(mppt7CurrentInReceived(double)));
-   connect(&mpptPresenter_, SIGNAL(mppt7VoltageOutReceived(double)),
-      this, SLOT(mppt7VoltageOutReceived(double)));
-   connect(&mpptPresenter_, SIGNAL(mppt7CurrentOutReceived(double)),
-      this, SLOT(mppt7CurrentOutReceived(double)));
+   connect(&mpptPresenter_, SIGNAL(mppt7PowerInReceived(double)),
+      this, SLOT(mppt7PowerInReceived(double)));
+   connect(&mpptPresenter_, SIGNAL(mppt7PowerOutReceived(double)),
+      this, SLOT(mppt7PowerOutReceived(double)));
+   connect(&mpptPresenter_, SIGNAL(mppt7EfficiencyReceived(double)),
+      this, SLOT(mppt7EfficiencyReceived(double)));
 
     connect(&vehiclePresenter_, SIGNAL(driverSetSpeedMetersPerSecondReceived(double)),
             this, SLOT(driverSetSpeedMetersPerSecondReceived(double)));
@@ -145,298 +131,100 @@ bool CompactView::isValuesGarbage(QList<double> values)
     return false;
 }
 
-void CompactView::updateMppt1PowerIn()
+void CompactView::mppt1PowerInReceived(double mppt1PowerIn)
 {
-   double powerIn = ui_.getMppt1CurrentIn() * ui_.getMppt1VoltageIn();
-   ui_.setMppt1PowerIn().setNum(powerIn);
+   ui_.setMppt1PowerIn().setNum(mppt1PowerIn);
 }
-void CompactView::updateMppt1PowerOut()
+void CompactView::mppt1PowerOutReceived(double mppt1PowerOut)
 {
-   double powerOut = ui_.getMppt1CurrentOut() * ui_.getMppt1VoltageOut();
-   ui_.setMppt1PowerIn().setNum(powerOut);
+   ui_.setMppt1PowerOut().setNum(mppt1PowerOut);;
 }
-void CompactView::updateMppt1Efficiency()
+void CompactView::mppt1EfficiencyReceived(double mppt1Efficiency)
 {
-   double powerIn = ui_.setMppt1PowerIn().text().toDouble();
-   double powerOut = ui_.setMppt1PowerOut().text().toDouble();
-   ui_.setMppt1Efficiency().setNum(powerOut / powerIn * 100);
+   ui_.setMppt1Efficiency().setNum(mppt1Efficiency);;
 }
 
-void CompactView::updateMppt2PowerIn()
+void CompactView::mppt2PowerInReceived(double mppt2PowerIn)
 {
-   double powerIn = ui_.getMppt2CurrentIn() * ui_.getMppt2VoltageIn();
-   ui_.setMppt2PowerIn().setNum(powerIn);
+   ui_.setMppt2PowerIn().setNum(mppt2PowerIn);
 }
-void CompactView::updateMppt2PowerOut()
+void CompactView::mppt2PowerOutReceived(double mppt2PowerOut)
 {
-   double powerOut = ui_.getMppt2CurrentOut() * ui_.getMppt2VoltageOut();
-   ui_.setMppt2PowerIn().setNum(powerOut);
+   ui_.setMppt2PowerOut().setNum(mppt2PowerOut);;
 }
-void CompactView::updateMppt2Efficiency()
+void CompactView::mppt2EfficiencyReceived(double mppt2Efficiency)
 {
-   double powerIn = ui_.setMppt2PowerIn().text().toDouble();
-   double powerOut = ui_.setMppt2PowerOut().text().toDouble();
-   ui_.setMppt2Efficiency().setNum(powerOut / powerIn * 100);
+   ui_.setMppt2Efficiency().setNum(mppt2Efficiency);;
 }
 
-void CompactView::updateMppt3PowerIn()
+
+void CompactView::mppt3PowerInReceived(double mppt3PowerIn)
 {
-   double powerIn = ui_.getMppt3CurrentIn() * ui_.getMppt3VoltageIn();
-   ui_.setMppt3PowerIn().setNum(powerIn);
+   ui_.setMppt3PowerIn().setNum(mppt3PowerIn);
 }
-void CompactView::updateMppt3PowerOut()
+void CompactView::mppt3PowerOutReceived(double mppt3PowerOut)
 {
-   double powerOut = ui_.getMppt3CurrentOut() * ui_.getMppt3VoltageOut();
-   ui_.setMppt3PowerIn().setNum(powerOut);
+   ui_.setMppt3PowerOut().setNum(mppt3PowerOut);;
 }
-void CompactView::updateMppt3Efficiency()
+void CompactView::mppt3EfficiencyReceived(double mppt3Efficiency)
 {
-   double powerIn = ui_.setMppt3PowerIn().text().toDouble();
-   double powerOut = ui_.setMppt3PowerOut().text().toDouble();
-   ui_.setMppt3Efficiency().setNum(powerOut / powerIn * 100);
+   ui_.setMppt3Efficiency().setNum(mppt3Efficiency);;
 }
 
-void CompactView::updateMppt4PowerIn()
+
+void CompactView::mppt4PowerInReceived(double mppt4PowerIn)
 {
-   double powerIn = ui_.getMppt4CurrentIn() * ui_.getMppt4VoltageIn();
-   ui_.setMppt4PowerIn().setNum(powerIn);
+   ui_.setMppt4PowerIn().setNum(mppt4PowerIn);
 }
-void CompactView::updateMppt4PowerOut()
+void CompactView::mppt4PowerOutReceived(double mppt4PowerOut)
 {
-   double powerOut = ui_.getMppt4CurrentOut() * ui_.getMppt4VoltageOut();
-   ui_.setMppt4PowerIn().setNum(powerOut);
+   ui_.setMppt4PowerOut().setNum(mppt4PowerOut);;
 }
-void CompactView::updateMppt4Efficiency()
+void CompactView::mppt4EfficiencyReceived(double mppt4Efficiency)
 {
-   double powerIn = ui_.setMppt4PowerIn().text().toDouble();
-   double powerOut = ui_.setMppt4PowerOut().text().toDouble();
-   ui_.setMppt4Efficiency().setNum(powerOut / powerIn * 100);
+   ui_.setMppt4Efficiency().setNum(mppt4Efficiency);;
 }
 
-void CompactView::updateMppt5PowerIn()
+
+void CompactView::mppt5PowerInReceived(double mppt5PowerIn)
 {
-   double powerIn = ui_.getMppt5CurrentIn() * ui_.getMppt5VoltageIn();
-   ui_.setMppt5PowerIn().setNum(powerIn);
+   ui_.setMppt5PowerIn().setNum(mppt5PowerIn);
 }
-void CompactView::updateMppt5PowerOut()
+void CompactView::mppt5PowerOutReceived(double mppt5PowerOut)
 {
-   double powerOut = ui_.getMppt5CurrentOut() * ui_.getMppt5VoltageOut();
-   ui_.setMppt5PowerIn().setNum(powerOut);
+   ui_.setMppt5PowerOut().setNum(mppt5PowerOut);;
 }
-void CompactView::updateMppt5Efficiency()
+void CompactView::mppt5EfficiencyReceived(double mppt5Efficiency)
 {
-   double powerIn = ui_.setMppt5PowerIn().text().toDouble();
-   double powerOut = ui_.setMppt5PowerOut().text().toDouble();
-   ui_.setMppt5Efficiency().setNum(powerOut / powerIn * 100);
+   ui_.setMppt5Efficiency().setNum(mppt5Efficiency);;
 }
 
-void CompactView::updateMppt6PowerIn()
+
+void CompactView::mppt6PowerInReceived(double mppt6PowerIn)
 {
-   double powerIn = ui_.getMppt6CurrentIn() * ui_.getMppt6VoltageIn();
-   ui_.setMppt6PowerIn().setNum(powerIn);
+   ui_.setMppt6PowerIn().setNum(mppt6PowerIn);
 }
-void CompactView::updateMppt6PowerOut()
+void CompactView::mppt6PowerOutReceived(double mppt6PowerOut)
 {
-   double powerOut = ui_.getMppt6CurrentOut() * ui_.getMppt6VoltageOut();
-   ui_.setMppt6PowerIn().setNum(powerOut);
+   ui_.setMppt6PowerOut().setNum(mppt6PowerOut);;
 }
-void CompactView::updateMppt6Efficiency()
+void CompactView::mppt6EfficiencyReceived(double mppt6Efficiency)
 {
-   double powerIn = ui_.setMppt6PowerIn().text().toDouble();
-   double powerOut = ui_.setMppt6PowerOut().text().toDouble();
-   ui_.setMppt6Efficiency().setNum(powerOut / powerIn * 100);
+   ui_.setMppt6Efficiency().setNum(mppt6Efficiency);;
 }
 
-void CompactView::updateMppt7PowerIn()
-{
-   double powerIn = ui_.getMppt7CurrentIn() * ui_.getMppt7VoltageIn();
-   ui_.setMppt7PowerIn().setNum(powerIn);
-}
-void CompactView::updateMppt7PowerOut()
-{
-   double powerOut = ui_.getMppt7CurrentOut() * ui_.getMppt7VoltageOut();
-   ui_.setMppt7PowerIn().setNum(powerOut);
-}
-void CompactView::updateMppt7Efficiency()
-{
-   double powerIn = ui_.setMppt7PowerIn().text().toDouble();
-   double powerOut = ui_.setMppt7PowerOut().text().toDouble();
-   ui_.setMppt7Efficiency().setNum(powerOut / powerIn * 100);
-}
 
-void CompactView::mppt1VoltageInReceived(double mppt1VoltageIn)
+void CompactView::mppt7PowerInReceived(double mppt7PowerIn)
 {
-   ui_.setMppt1VoltageIn(mppt1VoltageIn);
-   updateMppt1PowerIn();
-   updateMppt1Efficiency();
+   ui_.setMppt7PowerIn().setNum(mppt7PowerIn);
 }
-void CompactView::mppt1CurrentInReceived(double mppt1CurrentIn)
+void CompactView::mppt7PowerOutReceived(double mppt7PowerOut)
 {
-   ui_.setMppt1CurrentIn(mppt1CurrentIn);
-   updateMppt1PowerIn();
-   updateMppt1Efficiency();
+   ui_.setMppt7PowerOut().setNum(mppt7PowerOut);;
 }
-void CompactView::mppt1VoltageOutReceived(double mppt1VoltageOut)
+void CompactView::mppt7EfficiencyReceived(double mppt7Efficiency)
 {
-   ui_.setMppt1VoltageOut(mppt1VoltageOut);
-   updateMppt1PowerOut();
-   updateMppt1Efficiency();
-}
-void CompactView::mppt1CurrentOutReceived(double mppt1CurrentOut)
-{
-   ui_.setMppt1CurrentOut(mppt1CurrentOut);
-   updateMppt1PowerOut();
-   updateMppt1Efficiency();
-}
-
-void CompactView::mppt2VoltageInReceived(double mppt2VoltageIn)
-{
-   ui_.setMppt2VoltageIn(mppt2VoltageIn);
-   updateMppt2PowerIn();
-   updateMppt2Efficiency();
-}
-void CompactView::mppt2CurrentInReceived(double mppt2CurrentIn)
-{
-   ui_.setMppt2CurrentIn(mppt2CurrentIn);
-   updateMppt2PowerIn();
-   updateMppt2Efficiency();
-}
-void CompactView::mppt2VoltageOutReceived(double mppt2VoltageOut)
-{
-   ui_.setMppt2VoltageOut(mppt2VoltageOut);
-   updateMppt2PowerOut();
-   updateMppt2Efficiency();
-}
-void CompactView::mppt2CurrentOutReceived(double mppt2CurrentOut)
-{
-   ui_.setMppt2CurrentOut(mppt2CurrentOut);
-   updateMppt2PowerOut();
-   updateMppt2Efficiency();
-}
-
-void CompactView::mppt3VoltageInReceived(double mppt3VoltageIn)
-{
-   ui_.setMppt3VoltageIn(mppt3VoltageIn);
-   updateMppt3PowerIn();
-   updateMppt3Efficiency();
-}
-void CompactView::mppt3CurrentInReceived(double mppt3CurrentIn)
-{
-   ui_.setMppt3CurrentIn(mppt3CurrentIn);
-   updateMppt3PowerIn();
-   updateMppt3Efficiency();
-}
-void CompactView::mppt3VoltageOutReceived(double mppt3VoltageOut)
-{
-   ui_.setMppt3VoltageOut(mppt3VoltageOut);
-   updateMppt3PowerOut();
-   updateMppt3Efficiency();
-}
-void CompactView::mppt3CurrentOutReceived(double mppt3CurrentOut)
-{
-   ui_.setMppt3CurrentOut(mppt3CurrentOut);
-   updateMppt3PowerOut();
-   updateMppt3Efficiency();
-}
-
-void CompactView::mppt4VoltageInReceived(double mppt4VoltageIn)
-{
-   ui_.setMppt4VoltageIn(mppt4VoltageIn);
-   updateMppt4PowerIn();
-   updateMppt4Efficiency();
-}
-void CompactView::mppt4CurrentInReceived(double mppt4CurrentIn)
-{
-   ui_.setMppt4CurrentIn(mppt4CurrentIn);
-   updateMppt4PowerIn();
-   updateMppt4Efficiency();
-}
-void CompactView::mppt4VoltageOutReceived(double mppt4VoltageOut)
-{
-   ui_.setMppt4VoltageOut(mppt4VoltageOut);
-   updateMppt4PowerOut();
-   updateMppt4Efficiency();
-}
-void CompactView::mppt4CurrentOutReceived(double mppt4CurrentOut)
-{
-   ui_.setMppt4CurrentOut(mppt4CurrentOut);
-   updateMppt4PowerOut();
-   updateMppt4Efficiency();
-}
-
-void CompactView::mppt5VoltageInReceived(double mppt5VoltageIn)
-{
-   ui_.setMppt5VoltageIn(mppt5VoltageIn);
-   updateMppt5PowerIn();
-   updateMppt5Efficiency();
-}
-void CompactView::mppt5CurrentInReceived(double mppt5CurrentIn)
-{
-   ui_.setMppt5CurrentIn(mppt5CurrentIn);
-   updateMppt5PowerIn();
-   updateMppt5Efficiency();
-}
-void CompactView::mppt5VoltageOutReceived(double mppt5VoltageOut)
-{
-   ui_.setMppt5VoltageOut(mppt5VoltageOut);
-   updateMppt5PowerOut();
-   updateMppt5Efficiency();
-}
-void CompactView::mppt5CurrentOutReceived(double mppt5CurrentOut)
-{
-   ui_.setMppt5CurrentOut(mppt5CurrentOut);
-   updateMppt5PowerOut();
-   updateMppt5Efficiency();
-}
-
-void CompactView::mppt6VoltageInReceived(double mppt6VoltageIn)
-{
-   ui_.setMppt6VoltageIn(mppt6VoltageIn);
-   updateMppt6PowerIn();
-   updateMppt6Efficiency();
-}
-void CompactView::mppt6CurrentInReceived(double mppt6CurrentIn)
-{
-   ui_.setMppt6CurrentIn(mppt6CurrentIn);
-   updateMppt6PowerIn();
-   updateMppt6Efficiency();
-}
-void CompactView::mppt6VoltageOutReceived(double mppt6VoltageOut)
-{
-   ui_.setMppt6VoltageOut(mppt6VoltageOut);
-   updateMppt6PowerOut();
-   updateMppt6Efficiency();
-}
-void CompactView::mppt6CurrentOutReceived(double mppt6CurrentOut)
-{
-   ui_.setMppt6CurrentOut(mppt6CurrentOut);
-   updateMppt6PowerOut();
-   updateMppt6Efficiency();
-}
-
-void CompactView::mppt7VoltageInReceived(double mppt7VoltageIn)
-{
-   ui_.setMppt7VoltageIn(mppt7VoltageIn);
-   updateMppt7PowerIn();
-   updateMppt7Efficiency();
-}
-void CompactView::mppt7CurrentInReceived(double mppt7CurrentIn)
-{
-   ui_.setMppt7CurrentIn(mppt7CurrentIn);
-   updateMppt7PowerIn();
-   updateMppt7Efficiency();
-}
-void CompactView::mppt7VoltageOutReceived(double mppt7VoltageOut)
-{
-   ui_.setMppt7VoltageOut(mppt7VoltageOut);
-   updateMppt7PowerOut();
-   updateMppt7Efficiency();
-}
-void CompactView::mppt7CurrentOutReceived(double mppt7CurrentOut)
-{
-   ui_.setMppt7CurrentOut(mppt7CurrentOut);
-   updateMppt7PowerOut();
-   updateMppt7Efficiency();
+   ui_.setMppt7Efficiency().setNum(mppt7Efficiency);;
 }
 
 void CompactView::motorOneFaultsReceived(MotorFaults motorFaults)

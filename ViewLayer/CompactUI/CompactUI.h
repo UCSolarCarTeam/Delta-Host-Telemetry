@@ -37,65 +37,6 @@ public:
     QLabel& setMppt5PowerOut();
     QLabel& setMppt6PowerOut();
     QLabel& setMppt7PowerOut();
-    
-    void setMppt1CurrentIn(double);
-    void setMppt1CurrentOut(double);
-    void setMppt2CurrentIn(double);
-    void setMppt2CurrentOut(double);
-    void setMppt3CurrentIn(double);
-    void setMppt3CurrentOut(double);
-    void setMppt4CurrentIn(double);
-    void setMppt4CurrentOut(double);
-    void setMppt5CurrentIn(double);
-    void setMppt5CurrentOut(double);
-    void setMppt6CurrentIn(double);
-    void setMppt6CurrentOut(double);
-    void setMppt7CurrentIn(double);
-    void setMppt7CurrentOut(double);
-    void setMppt1VoltageIn(double);
-    void setMppt1VoltageOut(double);
-    void setMppt2VoltageIn(double);
-    void setMppt2VoltageOut(double);
-    void setMppt3VoltageIn(double);
-    void setMppt3VoltageOut(double);
-    void setMppt4VoltageIn(double);
-    void setMppt4VoltageOut(double);
-    void setMppt5VoltageIn(double);
-    void setMppt5VoltageOut(double);
-    void setMppt6VoltageIn(double);
-    void setMppt6VoltageOut(double);
-    void setMppt7VoltageIn(double);
-    void setMppt7VoltageOut(double);
-
-    double getMppt1CurrentIn();
-    double getMppt1CurrentOut();
-    double getMppt2CurrentIn();
-    double getMppt2CurrentOut();
-    double getMppt3CurrentIn();
-    double getMppt3CurrentOut();
-    double getMppt4CurrentIn();
-    double getMppt4CurrentOut();
-    double getMppt5CurrentIn();
-    double getMppt5CurrentOut();
-    double getMppt6CurrentIn();
-    double getMppt6CurrentOut();
-    double getMppt7CurrentIn();
-    double getMppt7CurrentOut();
-
-    double getMppt1VoltageIn();
-    double getMppt1VoltageOut();
-    double getMppt2VoltageIn();
-    double getMppt2VoltageOut();
-    double getMppt3VoltageIn();
-    double getMppt3VoltageOut();
-    double getMppt4VoltageIn();
-    double getMppt4VoltageOut();
-    double getMppt5VoltageIn();
-    double getMppt5VoltageOut();
-    double getMppt6VoltageIn();
-    double getMppt6VoltageOut();
-    double getMppt7VoltageIn();
-    double getMppt7VoltageOut();
 
     QLabel& setSetSpeed();
     QLabel& setSetCurrent();
@@ -153,41 +94,6 @@ public:
     QLabel& setOutput3GConnectionStatus();
 
 private:
-    double mppt1CurrentIn;
-    double mppt1CurrentOut;
-    double mppt1VoltageOut;
-    double mppt1VoltageIn;
-
-    double mppt2CurrentIn;
-    double mppt2CurrentOut;
-    double mppt2VoltageOut;
-    double mppt2VoltageIn;
-
-    double mppt3CurrentIn;
-    double mppt3CurrentOut;
-    double mppt3VoltageOut;
-    double mppt3VoltageIn;
-
-    double mppt4CurrentIn;
-    double mppt4CurrentOut;
-    double mppt4VoltageOut;
-    double mppt4VoltageIn;
-
-    double mppt5CurrentIn;
-    double mppt5CurrentOut;
-    double mppt5VoltageOut;
-    double mppt5VoltageIn;
-
-    double mppt6CurrentIn;
-    double mppt6CurrentOut;
-    double mppt6VoltageOut;
-    double mppt6VoltageIn;
-
-    double mppt7CurrentIn;
-    double mppt7CurrentOut;
-    double mppt7VoltageOut;
-    double mppt7VoltageIn;
-
     Ui::CompactUI *ui;
     QList<QLabel*> batteryCMUCellVoltageLabels_;
 };

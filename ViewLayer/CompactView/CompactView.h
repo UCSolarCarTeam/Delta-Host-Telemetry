@@ -29,34 +29,6 @@ public:
     ~CompactView();
 
 private:
-    void updateMppt1PowerIn();
-    void updateMppt1PowerOut();
-    void updateMppt1Efficiency();
-
-    void updateMppt2PowerIn();
-    void updateMppt2PowerOut();
-    void updateMppt2Efficiency();
-
-    void updateMppt3PowerIn();
-    void updateMppt3PowerOut();
-    void updateMppt3Efficiency();
-
-    void updateMppt4PowerIn();
-    void updateMppt4PowerOut();
-    void updateMppt4Efficiency();
-
-    void updateMppt5PowerIn();
-    void updateMppt5PowerOut();
-    void updateMppt5Efficiency();
-
-    void updateMppt6PowerIn();
-    void updateMppt6PowerOut();
-    void updateMppt6Efficiency();
-
-    void updateMppt7PowerIn();
-    void updateMppt7PowerOut();
-    void updateMppt7Efficiency();
-
     bool isValuesGarbage(QList<double> values);
 
     BatteryPresenter& batteryPresenter_;
@@ -94,40 +66,33 @@ private slots:
     void motorTwoLimitFlagsReceived(LimitFlags limitFlags);
     void batteryFaultsReceived(BatteryFaults batteryFaults);
 
-    void mppt1VoltageInReceived(double);
-    void mppt1CurrentInReceived(double);
-    void mppt1VoltageOutReceived(double);
-    void mppt1CurrentOutReceived(double);
+    void mppt1PowerInReceived(double);
+    void mppt1PowerOutReceived(double);
+    void mppt1EfficiencyReceived(double);
 
-    void mppt2VoltageInReceived(double);
-    void mppt2CurrentInReceived(double);
-    void mppt2VoltageOutReceived(double);
-    void mppt2CurrentOutReceived(double);
+    void mppt2PowerInReceived(double);
+    void mppt2PowerOutReceived(double);
+    void mppt2EfficiencyReceived(double);
 
-    void mppt3VoltageInReceived(double);
-    void mppt3CurrentInReceived(double);
-    void mppt3VoltageOutReceived(double);
-    void mppt3CurrentOutReceived(double);
+    void mppt3PowerInReceived(double);
+    void mppt3PowerOutReceived(double);
+    void mppt3EfficiencyReceived(double);
 
-    void mppt4VoltageInReceived(double);
-    void mppt4CurrentInReceived(double);
-    void mppt4VoltageOutReceived(double);
-    void mppt4CurrentOutReceived(double);
+    void mppt4PowerInReceived(double);
+    void mppt4PowerOutReceived(double);
+    void mppt4EfficiencyReceived(double);
 
-    void mppt5VoltageInReceived(double);
-    void mppt5CurrentInReceived(double);
-    void mppt5VoltageOutReceived(double);
-    void mppt5CurrentOutReceived(double);
+    void mppt5PowerInReceived(double);
+    void mppt5PowerOutReceived(double);
+    void mppt5EfficiencyReceived(double);
 
-    void mppt6VoltageInReceived(double);
-    void mppt6CurrentInReceived(double);
-    void mppt6VoltageOutReceived(double);
-    void mppt6CurrentOutReceived(double);
+    void mppt6PowerInReceived(double);
+    void mppt6PowerOutReceived(double);
+    void mppt6EfficiencyReceived(double);
 
-    void mppt7VoltageInReceived(double);
-    void mppt7CurrentInReceived(double);
-    void mppt7VoltageOutReceived(double);
-    void mppt7CurrentOutReceived(double);
+    void mppt7PowerInReceived(double);
+    void mppt7PowerOutReceived(double);
+    void mppt7EfficiencyReceived(double);
 
     void connectionFailed(QString);
     void connectionSucceeded();

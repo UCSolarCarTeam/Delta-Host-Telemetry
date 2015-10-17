@@ -17,6 +17,12 @@ void MpptPresenter::relayMpptData()
 		this, SIGNAL(mppt1VoltageOutReceived(double)));
 	connect(&mpptData_, SIGNAL(mppt1CurrentOutReceived(double)),
 		this, SIGNAL(mppt1CurrentOutReceived(double)));
+    connect(&mpptData_, SIGNAL(mppt1PowerInReceived(double)),
+        this, SIGNAL(mppt1PowerInReceived(double)));
+    connect(&mpptData_, SIGNAL(mppt1PowerOutReceived(double)),
+        this, SIGNAL(mppt1PowerOutReceived(double)));
+    connect(&mpptData_, SIGNAL(mppt1EfficiencyReceived(double)),
+        this, SIGNAL(mppt1EfficiencyReceived(double)));
 	connect(&mpptData_, SIGNAL(mppt1TypeReceived(QString)),
 		this, SIGNAL(mppt1TypeReceived(QString)));
 	connect(&mpptData_, SIGNAL(mppt1ModeReceived(QString)),
@@ -30,6 +36,12 @@ void MpptPresenter::relayMpptData()
 		this, SIGNAL(mppt2VoltageOutReceived(double)));
 	connect(&mpptData_, SIGNAL(mppt2CurrentOutReceived(double)),
 		this, SIGNAL(mppt2CurrentOutReceived(double)));
+    connect(&mpptData_, SIGNAL(mppt2PowerInReceived(double)),
+        this, SIGNAL(mppt2PowerInReceived(double)));
+    connect(&mpptData_, SIGNAL(mppt2PowerOutReceived(double)),
+        this, SIGNAL(mppt2PowerOutReceived(double)));
+    connect(&mpptData_, SIGNAL(mppt2EfficiencyReceived(double)),
+        this, SIGNAL(mppt2EfficiencyReceived(double)));
 	connect(&mpptData_, SIGNAL(mppt2TypeReceived(QString)),
 		this, SIGNAL(mppt2TypeReceived(QString)));
 	connect(&mpptData_, SIGNAL(mppt2ModeReceived(QString)),
@@ -43,6 +55,12 @@ void MpptPresenter::relayMpptData()
 		this, SIGNAL(mppt3VoltageOutReceived(double)));
 	connect(&mpptData_, SIGNAL(mppt3CurrentOutReceived(double)),
 		this, SIGNAL(mppt3CurrentOutReceived(double)));
+    connect(&mpptData_, SIGNAL(mppt3PowerInReceived(double)),
+        this, SIGNAL(mppt3PowerInReceived(double)));
+    connect(&mpptData_, SIGNAL(mppt3PowerOutReceived(double)),
+        this, SIGNAL(mppt3PowerOutReceived(double)));
+    connect(&mpptData_, SIGNAL(mppt3EfficiencyReceived(double)),
+        this, SIGNAL(mppt3EfficiencyReceived(double)));
 	connect(&mpptData_, SIGNAL(mppt3TypeReceived(QString)),
 		this, SIGNAL(mppt3TypeReceived(QString)));
 	connect(&mpptData_, SIGNAL(mppt3ModeReceived(QString)),
@@ -56,6 +74,12 @@ void MpptPresenter::relayMpptData()
 		this, SIGNAL(mppt4VoltageOutReceived(double)));
 	connect(&mpptData_, SIGNAL(mppt4CurrentOutReceived(double)),
 		this, SIGNAL(mppt4CurrentOutReceived(double)));
+    connect(&mpptData_, SIGNAL(mppt4PowerInReceived(double)),
+        this, SIGNAL(mppt4PowerInReceived(double)));
+    connect(&mpptData_, SIGNAL(mppt4PowerOutReceived(double)),
+        this, SIGNAL(mppt4PowerOutReceived(double)));
+    connect(&mpptData_, SIGNAL(mppt4EfficiencyReceived(double)),
+        this, SIGNAL(mppt4EfficiencyReceived(double)));
 	connect(&mpptData_, SIGNAL(mppt4TypeReceived(QString)),
 		this, SIGNAL(mppt4TypeReceived(QString)));
 	connect(&mpptData_, SIGNAL(mppt4ModeReceived(QString)),
@@ -69,6 +93,12 @@ void MpptPresenter::relayMpptData()
 		this, SIGNAL(mppt5VoltageOutReceived(double)));
 	connect(&mpptData_, SIGNAL(mppt5CurrentOutReceived(double)),
 		this, SIGNAL(mppt5CurrentOutReceived(double)));
+    connect(&mpptData_, SIGNAL(mppt5PowerInReceived(double)),
+        this, SIGNAL(mppt5PowerInReceived(double)));
+    connect(&mpptData_, SIGNAL(mppt5PowerOutReceived(double)),
+        this, SIGNAL(mppt5PowerOutReceived(double)));
+    connect(&mpptData_, SIGNAL(mppt5EfficiencyReceived(double)),
+        this, SIGNAL(mppt5EfficiencyReceived(double)));
 	connect(&mpptData_, SIGNAL(mppt5TypeReceived(QString)),
 		this, SIGNAL(mppt5TypeReceived(QString)));
 	connect(&mpptData_, SIGNAL(mppt5ModeReceived(QString)),
@@ -82,6 +112,12 @@ void MpptPresenter::relayMpptData()
 		this, SIGNAL(mppt6VoltageOutReceived(double)));
 	connect(&mpptData_, SIGNAL(mppt6CurrentOutReceived(double)),
 		this, SIGNAL(mppt6CurrentOutReceived(double)));
+    connect(&mpptData_, SIGNAL(mppt6PowerInReceived(double)),
+        this, SIGNAL(mppt6PowerInReceived(double)));
+    connect(&mpptData_, SIGNAL(mppt6PowerOutReceived(double)),
+        this, SIGNAL(mppt6PowerOutReceived(double)));
+    connect(&mpptData_, SIGNAL(mppt6EfficiencyReceived(double)),
+        this, SIGNAL(mppt6EfficiencyReceived(double)));
 	connect(&mpptData_, SIGNAL(mppt6TypeReceived(QString)),
 		this, SIGNAL(mppt6TypeReceived(QString)));
 	connect(&mpptData_, SIGNAL(mppt6ModeReceived(QString)),
@@ -95,6 +131,12 @@ void MpptPresenter::relayMpptData()
 		this, SIGNAL(mppt7VoltageOutReceived(double)));
 	connect(&mpptData_, SIGNAL(mppt7CurrentOutReceived(double)),
 		this, SIGNAL(mppt7CurrentOutReceived(double)));
+    connect(&mpptData_, SIGNAL(mppt7PowerInReceived(double)),
+        this, SIGNAL(mppt7PowerInReceived(double)));
+    connect(&mpptData_, SIGNAL(mppt7PowerOutReceived(double)),
+        this, SIGNAL(mppt7PowerOutReceived(double)));
+    connect(&mpptData_, SIGNAL(mppt7EfficiencyReceived(double)),
+        this, SIGNAL(mppt7EfficiencyReceived(double)));
 	connect(&mpptData_, SIGNAL(mppt7TypeReceived(QString)),
 		this, SIGNAL(mppt7TypeReceived(QString)));
 	connect(&mpptData_, SIGNAL(mppt7ModeReceived(QString)),

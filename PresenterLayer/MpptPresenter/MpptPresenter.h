@@ -19,6 +19,9 @@ signals:
 	void mppt1CurrentInReceived(double);
 	void mppt1VoltageOutReceived(double);
 	void mppt1CurrentOutReceived(double);
+    void mppt1PowerInReceived(double);
+    void mppt1PowerOutReceived(double);
+    void mppt1EfficiencyReceived(double);
 	void mppt1TypeReceived(QString);
 	void mppt1ModeReceived(QString);
 
@@ -26,6 +29,9 @@ signals:
 	void mppt2CurrentInReceived(double);
 	void mppt2VoltageOutReceived(double);
 	void mppt2CurrentOutReceived(double);
+    void mppt2PowerInReceived(double);
+    void mppt2PowerOutReceived(double);
+    void mppt2EfficiencyReceived(double);
 	void mppt2TypeReceived(QString);
 	void mppt2ModeReceived(QString);
 
@@ -33,6 +39,9 @@ signals:
 	void mppt3CurrentInReceived(double);
 	void mppt3VoltageOutReceived(double);
 	void mppt3CurrentOutReceived(double);
+    void mppt3PowerInReceived(double);
+    void mppt3PowerOutReceived(double);
+    void mppt3EfficiencyReceived(double);
 	void mppt3TypeReceived(QString);
 	void mppt3ModeReceived(QString);
 
@@ -40,6 +49,9 @@ signals:
 	void mppt4CurrentInReceived(double);
 	void mppt4VoltageOutReceived(double);
 	void mppt4CurrentOutReceived(double);
+    void mppt4PowerInReceived(double);
+    void mppt4PowerOutReceived(double);
+    void mppt4EfficiencyReceived(double);
 	void mppt4TypeReceived(QString);
 	void mppt4ModeReceived(QString);
 
@@ -47,6 +59,9 @@ signals:
 	void mppt5CurrentInReceived(double);
 	void mppt5VoltageOutReceived(double);
 	void mppt5CurrentOutReceived(double);
+    void mppt5PowerInReceived(double);
+    void mppt5PowerOutReceived(double);
+    void mppt5EfficiencyReceived(double);
 	void mppt5TypeReceived(QString);
 	void mppt5ModeReceived(QString);
 
@@ -54,6 +69,9 @@ signals:
 	void mppt6CurrentInReceived(double);
 	void mppt6VoltageOutReceived(double);
 	void mppt6CurrentOutReceived(double);
+    void mppt6PowerInReceived(double);
+    void mppt6PowerOutReceived(double);
+    void mppt6EfficiencyReceived(double);
 	void mppt6TypeReceived(QString);
 	void mppt6ModeReceived(QString);
 
@@ -61,6 +79,9 @@ signals:
 	void mppt7CurrentInReceived(double);
 	void mppt7VoltageOutReceived(double);
 	void mppt7CurrentOutReceived(double);
+    void mppt7PowerInReceived(double);
+    void mppt7PowerOutReceived(double);
+    void mppt7EfficiencyReceived(double);
 	void mppt7TypeReceived(QString);
 	void mppt7ModeReceived(QString);
 };
