@@ -88,7 +88,16 @@ public:
 
     QList<QLabel*>& batteryCMUCellVoltageLabels();
 
-    QTextEdit& historyTextEdit();
+    QLabel& softwareOverCurrentLabel1();
+    QLabel& hardwareOverCurrentLabel1();
+
+    QLabel& softwareOverCurrentLabel2();
+    QLabel& hardwareOverCurrentLabel2();
+
+    QLabel& cellOverVoltageLabel();
+    QLabel& cellUnderVoltageLabel();
+    QLabel& cellOverTemperatureLabel();
+    QLabel& cmuCommunicationsTimeoutLabel();
 
     QLabel& setInputSerialConnectionStatus();
     QLabel& setOutput3GConnectionStatus();

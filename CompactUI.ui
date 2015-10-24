@@ -873,12 +873,13 @@ border-style:solid;
 border-width: 1px;
 padding: 4px;
 border-color:rgb(30,30,30);
+}
+QLabel{
+font-size: 18px;
+margin:5px;
 }</string>
            </property>
-           <layout class="QVBoxLayout" name="verticalLayout_5">
-            <property name="spacing">
-             <number>0</number>
-            </property>
+           <layout class="QGridLayout" name="gridLayout_6">
             <property name="leftMargin">
              <number>14</number>
             </property>
@@ -891,11 +892,149 @@ border-color:rgb(30,30,30);
             <property name="bottomMargin">
              <number>14</number>
             </property>
-            <item>
-             <widget class="QTextEdit" name="historyTextEdit">
+            <item row="3" column="0" colspan="2">
+             <widget class="QLabel" name="motorTwoFaultsTitleLabel">
               <property name="styleSheet">
-               <string notr="true">background-color: rgb(55,55,55);
-border: 1px solid rgb(60,60,60);</string>
+               <string notr="true">border:none;
+font-size: 22px;</string>
+              </property>
+              <property name="text">
+               <string>Motor Two Faults</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="0" colspan="2">
+             <widget class="QLabel" name="batteryFaultsTitleLabel">
+              <property name="styleSheet">
+               <string notr="true">font-size: 22px;
+border:none;</string>
+              </property>
+              <property name="text">
+               <string>Battery Faults</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0" colspan="2">
+             <widget class="QLabel" name="cellOverVoltageLabel">
+              <property name="styleSheet">
+               <string notr="true">background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 rgb(40, 176, 13), stop: 1 green);</string>
+              </property>
+              <property name="text">
+               <string>Cell Over Voltage</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0" colspan="2">
+             <widget class="QLabel" name="motorOneFaultsTitleLabel">
+              <property name="styleSheet">
+               <string notr="true">font-size: 22px;
+border:none;</string>
+              </property>
+              <property name="text">
+               <string>Motor One Faults</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="0" colspan="2">
+             <widget class="QLabel" name="cmuCommunicationsTimeoutLabel">
+              <property name="styleSheet">
+               <string notr="true">background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 rgb(40, 176, 13), stop: 1 green);</string>
+              </property>
+              <property name="text">
+               <string> CMU Communications Timeout</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="0" colspan="2">
+             <widget class="QLabel" name="cellOverTemperatureLabel">
+              <property name="styleSheet">
+               <string notr="true">background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 rgb(40, 176, 13), stop: 1 green);</string>
+              </property>
+              <property name="text">
+               <string>Cell Over Temperature</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="0" colspan="2">
+             <widget class="QLabel" name="cellUnderVoltageLabel">
+              <property name="styleSheet">
+               <string notr="true">background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 rgb(40, 176, 13), stop: 1 green);</string>
+              </property>
+              <property name="text">
+               <string>Cell Under Voltage</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0" colspan="2">
+             <widget class="QLabel" name="softwareOverCurrentLabel1">
+              <property name="styleSheet">
+               <string notr="true">background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 rgb(40, 176, 13), stop: 1 green);</string>
+              </property>
+              <property name="text">
+               <string>Software Over Current</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0" colspan="2">
+             <widget class="QLabel" name="hardwareOverCurrentLabel1">
+              <property name="styleSheet">
+               <string notr="true">background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 rgb(40, 176, 13), stop: 1 green);</string>
+              </property>
+              <property name="text">
+               <string>Hardware Over Current</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0" colspan="2">
+             <widget class="QLabel" name="softwareOverCurrentLabel2">
+              <property name="styleSheet">
+               <string notr="true">background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 rgb(40, 176, 13), stop: 1 green);</string>
+              </property>
+              <property name="text">
+               <string>Software Over Current</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0" colspan="2">
+             <widget class="QLabel" name="hardwareOverCurrentLabel2">
+              <property name="styleSheet">
+               <string notr="true">background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 rgb(40, 176, 13), stop: 1 green);</string>
+              </property>
+              <property name="text">
+               <string>Hardware Over Current</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
               </property>
              </widget>
             </item>

@@ -29,6 +29,7 @@ public:
     ~CompactView();
 
 private:
+    bool isLabelRed(QLabel&);
     bool isValuesGarbage(QList<double> values);
 
     BatteryPresenter& batteryPresenter_;
@@ -61,9 +62,7 @@ private slots:
     void highlightUntrustedVoltages();
 
     void motorOneFaultsReceived(MotorFaults motorFaults);
-    void motorOneLimitFlagsReceived(LimitFlags limitFlags);
     void motorTwoFaultsReceived(MotorFaults motorFaults);
-    void motorTwoLimitFlagsReceived(LimitFlags limitFlags);
     void batteryFaultsReceived(BatteryFaults batteryFaults);
 
     void mppt1PowerInReceived(double);

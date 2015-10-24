@@ -82,7 +82,16 @@ public:
 
     virtual QList<QLabel*>& batteryCMUCellVoltageLabels() = 0;
 
-    virtual QTextEdit& historyTextEdit() = 0;
+    virtual QLabel& softwareOverCurrentLabel1() = 0;
+    virtual QLabel& hardwareOverCurrentLabel1() = 0;
+
+    virtual QLabel& softwareOverCurrentLabel2() = 0;
+    virtual QLabel& hardwareOverCurrentLabel2() = 0;
+
+    virtual QLabel& cellOverVoltageLabel() = 0;
+    virtual QLabel& cellUnderVoltageLabel() = 0;
+    virtual QLabel& cellOverTemperatureLabel() = 0;
+    virtual QLabel& cmuCommunicationsTimeoutLabel() = 0;
 
     virtual QLabel& setInputSerialConnectionStatus() = 0;
     virtual QLabel& setOutput3GConnectionStatus() = 0;

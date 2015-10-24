@@ -317,9 +317,37 @@ QList<QLabel*>& CompactUI::batteryCMUCellVoltageLabels()
 {
     return batteryCMUCellVoltageLabels_;
 }
-QTextEdit& CompactUI::historyTextEdit()
+QLabel& CompactUI::softwareOverCurrentLabel1()
 {
-   return *ui->historyTextEdit;
+   return *ui->softwareOverCurrentLabel1;
+}
+QLabel& CompactUI::hardwareOverCurrentLabel1()
+{
+   return *ui->hardwareOverCurrentLabel1;
+}
+QLabel& CompactUI::softwareOverCurrentLabel2()
+{
+   return *ui->softwareOverCurrentLabel2;
+}
+QLabel& CompactUI::hardwareOverCurrentLabel2()
+{
+   return *ui->hardwareOverCurrentLabel2;
+}
+QLabel& CompactUI::cellOverVoltageLabel()
+{
+   return *ui->cellOverVoltageLabel;
+}
+QLabel& CompactUI::cellUnderVoltageLabel()
+{
+   return *ui->cellUnderVoltageLabel;
+}
+QLabel& CompactUI::cellOverTemperatureLabel()
+{
+   return *ui->cellOverTemperatureLabel;
+}
+QLabel& CompactUI::cmuCommunicationsTimeoutLabel()
+{
+   return *ui->cmuCommunicationsTimeoutLabel;
 }
 QLabel& CompactUI::setInputSerialConnectionStatus()
 {
