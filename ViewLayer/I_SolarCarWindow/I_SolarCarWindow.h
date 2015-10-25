@@ -4,7 +4,7 @@
 
 class I_SolarCarWindow : public QWidget
 {
-	Q_OBJECT
+   Q_OBJECT
 public:
-	virtual ~I_SolarCarWindow() {}
+   virtual ~I_SolarCarWindow() {}
 };

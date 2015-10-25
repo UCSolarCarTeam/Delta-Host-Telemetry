@@ -53,11 +53,10 @@ MpptPresenter& PresenterContainer::mpptPresenter()
 
 PowerPresenter& PresenterContainer::powerPresenter()
 {
-    return *powerPresenter_;
+   return *powerPresenter_;
 }
 
 FaultsPresenter& PresenterContainer::faultsPresenter()
 {
-	return *faultsPresenter_;
+   return *faultsPresenter_;
 }
-

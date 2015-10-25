@@ -3,7 +3,7 @@
 #include <QObject>
 class QHostAddress;
 
-#include "../../CommunicationLayer/CommDeviceControl/CommDefines.h"
+#include "CommunicationLayer/CommDeviceControl/CommDefines.h"
 class ConnectionController;
 class RadioConnectionService;
 class UdpConnectionService;
@@ -13,7 +13,7 @@ class I_CommunicationsMonitoringService;
 
 class CommunicationPresenter : public QObject
 {
-	Q_OBJECT
+   Q_OBJECT
 public:
    explicit CommunicationPresenter(
       UdpMessageForwarder& udpMessageForwarder,

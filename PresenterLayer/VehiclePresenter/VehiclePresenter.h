@@ -5,14 +5,14 @@ class I_VehicleData;
 
 class VehiclePresenter : public QObject
 {
-	Q_OBJECT
+   Q_OBJECT
 public:
-	explicit VehiclePresenter(const I_VehicleData& vehicleData);
+   explicit VehiclePresenter(const I_VehicleData& vehicleData);
 
 private:
-	void relayVehicleData();
+   void relayVehicleData();
 
-	const I_VehicleData& vehicleData_;
+   const I_VehicleData& vehicleData_;
 
 signals:
     void driverSetSpeedMetersPerSecondReceived(double driverSetSpeedMetersPerSecond);

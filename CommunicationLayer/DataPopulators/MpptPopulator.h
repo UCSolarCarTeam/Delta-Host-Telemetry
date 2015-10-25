@@ -1,20 +1,20 @@
 #pragma once
 
 #include <QObject>
-#include "../PacketDecoder/I_PacketDecoder.h"
-#include "../../DataLayer/MpptData/I_MpptData.h"
+#include "CommunicationLayer/PacketDecoder/I_PacketDecoder.h"
+#include "DataLayer/MpptData/I_MpptData.h"
 
 class MpptPopulator : public QObject
 {
-	Q_OBJECT
+   Q_OBJECT
 public:
-	MpptPopulator(I_PacketDecoder& packetDecoder,
-				  I_MpptData& mpptData);
+   MpptPopulator(I_PacketDecoder& packetDecoder,
+              I_MpptData& mpptData);
 
 public slots:
-	void populateData(const MpptDataMessage);
+   void populateData(const MpptDataMessage);
 
 private:
-	I_PacketDecoder& packetDecoder_;
-	I_MpptData& mpptData_;
+   I_PacketDecoder& packetDecoder_;
+   I_MpptData& mpptData_;
 };

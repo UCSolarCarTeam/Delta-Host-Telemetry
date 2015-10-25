@@ -15,7 +15,7 @@ public:
     double motorCurrentReal() const;
     double backEmfImaginary() const;
     double dcBusAmpHours() const;
-    
+
     /*PowerData "Sets"*/
     void setBusCurrentA(double busCurrentA);
     void setBusVoltage(double busVoltage);
@@ -25,11 +25,10 @@ public:
     void setDcBusAmpHours(double dcBusAmpHours);
 
 private:
-	double busCurrentA_;
-    double busVoltage_;
-    double motorVoltageReal_;
-    double motorCurrentReal_;
-    double backEmfImaginary_;
-    double dcBusAmpHours_;
+   double busCurrentA_;
+   double busVoltage_;
+   double motorVoltageReal_;
+   double motorCurrentReal_;
+   double backEmfImaginary_;
+   double dcBusAmpHours_;
 };
-
