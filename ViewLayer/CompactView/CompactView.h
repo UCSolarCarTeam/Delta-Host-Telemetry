@@ -2,18 +2,18 @@
 
 #include <QObject>
 #include <QLabel>
-#include "../../CommunicationLayer/MessagingFramework/MotorFaults.h"
-#include "../../CommunicationLayer/MessagingFramework/LimitFlags.h"
-#include "../../CommunicationLayer/MessagingFramework/BatteryFaults.h"
-#include "../CompactUI/CompactUI.h"
+#include "CommunicationLayer/MessagingFramework/BatteryFaults.h"
+#include "CommunicationLayer/MessagingFramework/LimitFlags.h"
+#include "CommunicationLayer/MessagingFramework/MotorFaults.h"
+#include "ViewLayer/CompactUI/CompactUI.h"
 
 class BatteryPresenter;
-class VehiclePresenter;
-class PowerPresenter;
 class CommunicationPresenter;
+class CompactUI;
 class FaultsPresenter;
 class MpptPresenter;
-class CompactUI;
+class PowerPresenter;
+class VehiclePresenter;
 
 class CompactView : public QObject
 {
