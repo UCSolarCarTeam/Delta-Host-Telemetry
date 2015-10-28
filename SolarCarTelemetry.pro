@@ -1,20 +1,9 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2014-10-13T12:01:32
-#
-#-------------------------------------------------
-
-QT       += core gui serialport
-
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets webkitwidgets
+QT += core gui serialport network widgets
 
 TARGET = ../release/SolarCarTelemetry
 TEMPLATE = app
 CONFIG += static
-#CONFIG += qwt
 
-#INCLUDEPATH += /usr/local/qwt-6.1.2/include
-#LIBS += -L/usr/local/qwt-6.1.2/lib -lqwt
 QMAKE_CXXFLAGS +=
 RCC_DIR= ../release
 DESTDIR = ../release
@@ -26,12 +15,8 @@ UI_DIR = ../release/.ui
 SOURCES += \
     BusinessLayer/BusinessContainer.cpp \
     BusinessLayer/LoggerService/LoggerService.cpp \
-    BusinessLayer/PlaybackService/PlaybackService.cpp \
     BusinessLayer/CommunicationsMonitoringService/CommunicationsMonitoringService.cpp \
-    CommunicationLayer/CommDeviceControl/CommDeviceManager.cpp \
-    CommunicationLayer/CommDeviceControl/ConnectionController.cpp \
     CommunicationLayer/CommDeviceControl/RadioConnectionService.cpp \
-    CommunicationLayer/CommDeviceControl/UdpConnectionService.cpp \
     CommunicationLayer/CommDeviceControl/UdpMessageForwarder.cpp \
     CommunicationLayer/CommunicationContainer.cpp \
     CommunicationLayer/DataPopulators/BatteryPopulator.cpp \
@@ -79,18 +64,12 @@ SOURCES += \
 HEADERS  += \
     BusinessLayer/BusinessContainer.h \
     BusinessLayer/LoggerService/LoggerService.h \
-    BusinessLayer/PlaybackService/I_PlaybackService.h \
-    BusinessLayer/PlaybackService/PlaybackService.h \
     BusinessLayer/CommunicationsMonitoringService/CommunicationsMonitoringService.h \
     BusinessLayer/CommunicationsMonitoringService/I_CommunicationsMonitoringService.h \
-    CommunicationLayer/CommunicationContainer.h \
-    CommunicationLayer/CommDeviceControl/CommDeviceManager.h \
-    CommunicationLayer/CommDeviceControl/ConnectionController.h \
     CommunicationLayer/CommDeviceControl/I_CommDevice.h \
-    CommunicationLayer/CommDeviceControl/I_ConnectionService.h \
     CommunicationLayer/CommDeviceControl/RadioConnectionService.h \
-    CommunicationLayer/CommDeviceControl/UdpConnectionService.h \
     CommunicationLayer/CommDeviceControl/UdpMessageForwarder.h \
+    CommunicationLayer/CommunicationContainer.h \
     CommunicationLayer/DataPopulators/BatteryPopulator.h \
     CommunicationLayer/DataPopulators/CmuPopulator.h \
     CommunicationLayer/DataPopulators/DriverDetailsPopulator.h \
@@ -144,12 +123,6 @@ HEADERS  += \
     ViewLayer/CompactUI/I_CompactUI.h
 
 FORMS    += \
-    EscapeDialog.ui \
-    FaultsUI.ui \
-    MpptUI.ui \
-    PlaybackUI.ui \
-    PowerUI.ui \
-    SolarCarTestUI.ui \
     CompactUI.ui
 
 RESOURCES += \

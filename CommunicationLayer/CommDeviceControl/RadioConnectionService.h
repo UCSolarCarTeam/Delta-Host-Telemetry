@@ -1,19 +1,22 @@
 #pragma once
 
-#include "I_ConnectionService.h"
 #include <QSerialPort>
 #include <QString>
+#include "I_CommDevice.h"
 
-class RadioConnectionService : public I_ConnectionService
+class RadioConnectionService : public I_CommDevice
 {
    Q_OBJECT
 public:
    RadioConnectionService(QSerialPort& serialPort);
    virtual ~RadioConnectionService();
 
-   void setSerialParameters(QString serialPortName, int baudRate);
+private slots:
+   void handleSerialDataIncoming();
    bool connectToDataSource();
-   void disconnectFromDataSource();
+
+private:
+   void setSerialParameters(QString serialPortName, int baudRate);
 
 private:
    QSerialPort& serialPort_;

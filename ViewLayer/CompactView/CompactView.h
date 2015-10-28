@@ -93,6 +93,6 @@ private slots:
     void mppt7PowerOutReceived(double);
     void mppt7EfficiencyReceived(double);
 
-    void connectionFailed(QString);
+    void connectionFailed(const QString& errorString);
     void connectionSucceeded();
 };

@@ -19,6 +19,8 @@ CommunicationsMonitoringService::CommunicationsMonitoringService(I_PacketChecksu
 
    updateTimer_.setInterval(1000); // update every second
    updateTimer_.setSingleShot(false);
+
+   start();
 }
 
 void CommunicationsMonitoringService::start()

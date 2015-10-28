@@ -28,7 +28,6 @@ public:
    PowerPresenter& powerPresenter();
    FaultsPresenter& faultsPresenter();
 
-
 private:
    QScopedPointer<BatteryPresenter> batteryPresenter_;
    QScopedPointer<CommunicationPresenter> communicationPresenter_;

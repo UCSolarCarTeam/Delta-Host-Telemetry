@@ -114,8 +114,8 @@ CompactView::CompactView(BatteryPresenter& batteryPresenter,
 
    connect(&communicationPresenter_, SIGNAL(connectionSucceeded()),
       this, SLOT(connectionSucceeded()));
-   connect(&communicationPresenter_, SIGNAL(connectionFailed(QString)),
-      this, SLOT(connectionFailed(QString)));
+   connect(&communicationPresenter_, SIGNAL(connectionFailed(const QString&)),
+      this, SLOT(connectionFailed(const QString&)));
 
    connect(&faultsPresenter_, SIGNAL(motorOneFaultsReceived(MotorFaults)),
       this, SLOT(motorOneFaultsReceived(MotorFaults)));
@@ -425,9 +425,9 @@ void CompactView::highlightUntrustedVoltages()
    }
 }
 
-void CompactView::connectionFailed(QString failureMessage)
+void CompactView::connectionFailed(const QString& errorString)
 {
-   ui_.setInputSerialConnectionStatus().setText(failureMessage);
+   ui_.setInputSerialConnectionStatus().setText(errorString);
    ui_.setInputSerialConnectionStatus().setStyleSheet("text-align: centre; color: rgb(255, 40, 40); background-color: rgb(70,70,70);"); // red text
 }
 

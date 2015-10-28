@@ -2,12 +2,9 @@
 #include <QUdpSocket>
 
 #include "../DataLayer/DataContainer.h"
-#include "CommunicationContainer.h"
-#include "CommDeviceControl/ConnectionController.h"
-#include "CommDeviceControl/CommDeviceManager.h"
 #include "CommDeviceControl/RadioConnectionService.h"
-#include "CommDeviceControl/UdpConnectionService.h"
 #include "CommDeviceControl/UdpMessageForwarder.h"
+#include "CommunicationContainer.h"
 #include "DataPopulators/BatteryPopulator.h"
 #include "DataPopulators/CmuPopulator.h"
 #include "DataPopulators/DriverDetailsPopulator.h"
@@ -24,15 +21,8 @@ class CommunicationContainerPrivate
 public:
    CommunicationContainerPrivate(DataContainer& dataContainer)
    : radioConnectionService(serialPort)
-   , udpConnectionService(udpSocket)
-   , commDeviceManager(
-      udpSocket,
-      serialPort)
-   , connectionController(
-      radioConnectionService,
-      udpConnectionService)
-   , messageForwarder(commDeviceManager)
-   , packetSynchronizer(commDeviceManager)
+   , messageForwarder(radioConnectionService)
+   , packetSynchronizer(radioConnectionService)
    , packetUnstuffer(packetSynchronizer)
    , packetChecksumChecker(packetUnstuffer)
    , packetDecoder(packetChecksumChecker)
@@ -60,11 +50,7 @@ public:
    }
 
    QSerialPort serialPort;
-   QUdpSocket udpSocket;
    RadioConnectionService radioConnectionService;
-   UdpConnectionService udpConnectionService;
-   CommDeviceManager commDeviceManager;
-   ConnectionController connectionController;
    UdpMessageForwarder messageForwarder;
    PacketSynchronizer packetSynchronizer;
    PacketUnstuffer packetUnstuffer;
@@ -87,22 +73,7 @@ CommunicationContainer::~CommunicationContainer()
 {
 }
 
-UdpMessageForwarder& CommunicationContainer::messageForwarder()
-{
-   return impl_->messageForwarder;
-}
-
-ConnectionController& CommunicationContainer::connectionController()
-{
-   return impl_->connectionController;
-}
-
-UdpConnectionService& CommunicationContainer::udpConnectionService()
-{
-   return impl_->udpConnectionService;
-}
-
-RadioConnectionService& CommunicationContainer::radioConnectionService()
+I_CommDevice& CommunicationContainer::commDevice()
 {
    return impl_->radioConnectionService;
 }
@@ -125,9 +96,4 @@ I_PacketDecoder& CommunicationContainer::packetDecoder()
 I_PacketChecksumChecker& CommunicationContainer::packetChecksumChecker()
 {
    return impl_->packetChecksumChecker;
-}
-
-CommDeviceManager& CommunicationContainer::commDeviceManager()
-{
-   return impl_->commDeviceManager;
 }
