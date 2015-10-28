@@ -5,11 +5,11 @@
 #include "CommunicationLayer/MessagingFramework/BatteryFaults.h"
 #include "CommunicationLayer/MessagingFramework/LimitFlags.h"
 #include "CommunicationLayer/MessagingFramework/MotorFaults.h"
-#include "ViewLayer/CompactUI/CompactUI.h"
+#include "ViewLayer/CompactUI/I_CompactUI.h"
 
 class BatteryPresenter;
 class CommunicationPresenter;
-class CompactUI;
+class I_CompactUI;
 class FaultsPresenter;
 class MpptPresenter;
 class PowerPresenter;
@@ -25,7 +25,7 @@ public:
               CommunicationPresenter& communicationPresenter,
               FaultsPresenter& faultsPresenter,
               MpptPresenter& mpptPresenter,
-              CompactUI& ui);
+              I_CompactUI& ui);
     ~CompactView();
 
 private:
@@ -39,7 +39,7 @@ private:
     FaultsPresenter& faultsPresenter_;
     MpptPresenter& mpptPresenter_;
 
-    CompactUI& ui_;
+    I_CompactUI& ui_;
 
 private slots:
     void driverSetSpeedMetersPerSecondReceived(double);

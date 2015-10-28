@@ -5,7 +5,7 @@
 #include "PresenterLayer/MpptPresenter/MpptPresenter.h"
 #include "PresenterLayer/PowerPresenter/PowerPresenter.h"
 #include "PresenterLayer/VehiclePresenter/VehiclePresenter.h"
-#include "ViewLayer/CompactUI/CompactUI.h"
+#include "ViewLayer/CompactUI/I_CompactUI.h"
 #include <QDateTime>
 
 CompactView::CompactView(BatteryPresenter& batteryPresenter,
@@ -14,7 +14,7 @@ CompactView::CompactView(BatteryPresenter& batteryPresenter,
                          CommunicationPresenter& communicationPresenter,
                          FaultsPresenter& faultsPresenter,
                          MpptPresenter& mpptPresenter,
-                         CompactUI& ui)
+                         I_CompactUI& ui)
    : batteryPresenter_(batteryPresenter)
    , vehiclePresenter_(vehiclePresenter)
    , powerPresenter_(powerPresenter)
@@ -148,237 +148,237 @@ bool CompactView::isLabelRed(QLabel& label)
 
 void CompactView::mppt1PowerInReceived(double mppt1PowerIn)
 {
-   ui_.setMppt1PowerIn().setNum(mppt1PowerIn);
+   ui_.mppt1PowerInLabel().setNum(mppt1PowerIn);
 }
 void CompactView::mppt1PowerOutReceived(double mppt1PowerOut)
 {
-   ui_.setMppt1PowerOut().setNum(mppt1PowerOut);;
+   ui_.mppt1PowerOutLabel().setNum(mppt1PowerOut);;
 }
 void CompactView::mppt1EfficiencyReceived(double mppt1Efficiency)
 {
-   ui_.setMppt1Efficiency().setNum(mppt1Efficiency);;
+   ui_.mppt1EfficiencyLabel().setNum(mppt1Efficiency);;
 }
 
 void CompactView::mppt2PowerInReceived(double mppt2PowerIn)
 {
-   ui_.setMppt2PowerIn().setNum(mppt2PowerIn);
+   ui_.mppt2PowerInLabel().setNum(mppt2PowerIn);
 }
 void CompactView::mppt2PowerOutReceived(double mppt2PowerOut)
 {
-   ui_.setMppt2PowerOut().setNum(mppt2PowerOut);;
+   ui_.mppt2PowerOutLabel().setNum(mppt2PowerOut);;
 }
 void CompactView::mppt2EfficiencyReceived(double mppt2Efficiency)
 {
-   ui_.setMppt2Efficiency().setNum(mppt2Efficiency);;
+   ui_.mppt2EfficiencyLabel().setNum(mppt2Efficiency);;
 }
 
 void CompactView::mppt3PowerInReceived(double mppt3PowerIn)
 {
-   ui_.setMppt3PowerIn().setNum(mppt3PowerIn);
+   ui_.mppt3PowerInLabel().setNum(mppt3PowerIn);
 }
 void CompactView::mppt3PowerOutReceived(double mppt3PowerOut)
 {
-   ui_.setMppt3PowerOut().setNum(mppt3PowerOut);;
+   ui_.mppt3PowerOutLabel().setNum(mppt3PowerOut);;
 }
 void CompactView::mppt3EfficiencyReceived(double mppt3Efficiency)
 {
-   ui_.setMppt3Efficiency().setNum(mppt3Efficiency);;
+   ui_.mppt3EfficiencyLabel().setNum(mppt3Efficiency);;
 }
 
 void CompactView::mppt4PowerInReceived(double mppt4PowerIn)
 {
-   ui_.setMppt4PowerIn().setNum(mppt4PowerIn);
+   ui_.mppt4PowerInLabel().setNum(mppt4PowerIn);
 }
 void CompactView::mppt4PowerOutReceived(double mppt4PowerOut)
 {
-   ui_.setMppt4PowerOut().setNum(mppt4PowerOut);;
+   ui_.mppt4PowerOutLabel().setNum(mppt4PowerOut);;
 }
 void CompactView::mppt4EfficiencyReceived(double mppt4Efficiency)
 {
-   ui_.setMppt4Efficiency().setNum(mppt4Efficiency);;
+   ui_.mppt4EfficiencyLabel().setNum(mppt4Efficiency);;
 }
 
 void CompactView::mppt5PowerInReceived(double mppt5PowerIn)
 {
-   ui_.setMppt5PowerIn().setNum(mppt5PowerIn);
+   ui_.mppt5PowerInLabel().setNum(mppt5PowerIn);
 }
 void CompactView::mppt5PowerOutReceived(double mppt5PowerOut)
 {
-   ui_.setMppt5PowerOut().setNum(mppt5PowerOut);;
+   ui_.mppt5PowerOutLabel().setNum(mppt5PowerOut);;
 }
 void CompactView::mppt5EfficiencyReceived(double mppt5Efficiency)
 {
-   ui_.setMppt5Efficiency().setNum(mppt5Efficiency);;
+   ui_.mppt5EfficiencyLabel().setNum(mppt5Efficiency);;
 }
 
 void CompactView::mppt6PowerInReceived(double mppt6PowerIn)
 {
-   ui_.setMppt6PowerIn().setNum(mppt6PowerIn);
+   ui_.mppt6PowerInLabel().setNum(mppt6PowerIn);
 }
 void CompactView::mppt6PowerOutReceived(double mppt6PowerOut)
 {
-   ui_.setMppt6PowerOut().setNum(mppt6PowerOut);;
+   ui_.mppt6PowerOutLabel().setNum(mppt6PowerOut);;
 }
 void CompactView::mppt6EfficiencyReceived(double mppt6Efficiency)
 {
-   ui_.setMppt6Efficiency().setNum(mppt6Efficiency);;
+   ui_.mppt6EfficiencyLabel().setNum(mppt6Efficiency);;
 }
 
 void CompactView::mppt7PowerInReceived(double mppt7PowerIn)
 {
-   ui_.setMppt7PowerIn().setNum(mppt7PowerIn);
+   ui_.mppt7PowerInLabel().setNum(mppt7PowerIn);
 }
 void CompactView::mppt7PowerOutReceived(double mppt7PowerOut)
 {
-   ui_.setMppt7PowerOut().setNum(mppt7PowerOut);;
+   ui_.mppt7PowerOutLabel().setNum(mppt7PowerOut);;
 }
 void CompactView::mppt7EfficiencyReceived(double mppt7Efficiency)
 {
-   ui_.setMppt7Efficiency().setNum(mppt7Efficiency);;
+   ui_.mppt7EfficiencyLabel().setNum(mppt7Efficiency);;
 }
 
 void CompactView::driverSetSpeedMetersPerSecondReceived(double driverSetSpeedMetersPerSecond)
 {
    //Convert meters per second to kilometers per hour
    double driverSetSpeedKph = driverSetSpeedMetersPerSecond * 3.6;
-   ui_.setSetSpeed().setNum(driverSetSpeedKph);
+   ui_.setSpeedLabel().setNum(driverSetSpeedKph);
 }
 void CompactView::driverSetCurrentReceived(double driverSetCurrent)
 {
-   ui_.setSetCurrent().setNum(driverSetCurrent);
+   ui_.setCurrentLabel().setNum(driverSetCurrent);
 }
 void CompactView::vehicleVelocityMetersPerSecondReceived(double vehicleVelocityMetersPerSecond)
 {
    //Convert meters per second to kilometers per hour
    double vehicleVelocityKph = vehicleVelocityMetersPerSecond * 3.6;
-   ui_.setActualSpeed().setNum(vehicleVelocityKph);
+   ui_.actualSpeedLabel().setNum(vehicleVelocityKph);
 }
 void CompactView::busCurrentAReceived(double busCurrentA)
 {
-   ui_.setBusCurrent().setNum(busCurrentA);
+   ui_.busCurrentLabel().setNum(busCurrentA);
 }
 void CompactView::busVoltageReceived(double busVoltage)
 {
-   ui_.setBusVoltage().setNum(busVoltage);
+   ui_.busVoltageLabel().setNum(busVoltage);
 }
 void CompactView::batteryCurrentReceived(double batteryCurrent)
 {
-   ui_.setBatteryCurrent().setNum(batteryCurrent);
+   ui_.batteryCurrentLabel().setNum(batteryCurrent);
 }
 void CompactView::batteryVoltageReceived(double batteryVoltage)
 {
-   ui_.setBatteryVoltage().setNum(batteryVoltage);
+   ui_.batteryVoltageLabel().setNum(batteryVoltage);
 }
 
 void CompactView::mod0CellTemperatureReceived(double mod0PcbTemperature)
 {
-   ui_.setBatteryCMU1Temp().setNum(mod0PcbTemperature);
+   ui_.batteryCMU1TempLabel().setNum(mod0PcbTemperature);
 }
 
 void CompactView::mod0CellVoltagesReceived(QList<double> cellVoltages)
 {
    if (isValuesGarbage(cellVoltages)){
-      ui_.setBatteryCMU1Cell1Voltage().setText("Err");
-      ui_.setBatteryCMU1Cell2Voltage().setText("Err");
-      ui_.setBatteryCMU1Cell3Voltage().setText("Err");
-      ui_.setBatteryCMU1Cell4Voltage().setText("Err");
-      ui_.setBatteryCMU1Cell5Voltage().setText("Err");
-      ui_.setBatteryCMU1Cell6Voltage().setText("Err");
-      ui_.setBatteryCMU1Cell7Voltage().setText("Err");
-      ui_.setBatteryCMU1Cell8Voltage().setText("Err");
+      ui_.batteryCMU1Cell1VoltageLabel().setText("Err");
+      ui_.batteryCMU1Cell2VoltageLabel().setText("Err");
+      ui_.batteryCMU1Cell3VoltageLabel().setText("Err");
+      ui_.batteryCMU1Cell4VoltageLabel().setText("Err");
+      ui_.batteryCMU1Cell5VoltageLabel().setText("Err");
+      ui_.batteryCMU1Cell6VoltageLabel().setText("Err");
+      ui_.batteryCMU1Cell7VoltageLabel().setText("Err");
+      ui_.batteryCMU1Cell8VoltageLabel().setText("Err");
    } else {
-      ui_.setBatteryCMU1Cell1Voltage().setText(QString::number(cellVoltages[0], 'f', 3));
-      ui_.setBatteryCMU1Cell2Voltage().setText(QString::number(cellVoltages[1], 'f', 3));
-      ui_.setBatteryCMU1Cell3Voltage().setText(QString::number(cellVoltages[2], 'f', 3));
-      ui_.setBatteryCMU1Cell4Voltage().setText(QString::number(cellVoltages[3], 'f', 3));
-      ui_.setBatteryCMU1Cell5Voltage().setText(QString::number(cellVoltages[4], 'f', 3));
-      ui_.setBatteryCMU1Cell6Voltage().setText(QString::number(cellVoltages[5], 'f', 3));
-      ui_.setBatteryCMU1Cell7Voltage().setText(QString::number(cellVoltages[6], 'f', 3));
-      ui_.setBatteryCMU1Cell8Voltage().setText(QString::number(cellVoltages[7], 'f', 3));
+      ui_.batteryCMU1Cell1VoltageLabel().setText(QString::number(cellVoltages[0], 'f', 3));
+      ui_.batteryCMU1Cell2VoltageLabel().setText(QString::number(cellVoltages[1], 'f', 3));
+      ui_.batteryCMU1Cell3VoltageLabel().setText(QString::number(cellVoltages[2], 'f', 3));
+      ui_.batteryCMU1Cell4VoltageLabel().setText(QString::number(cellVoltages[3], 'f', 3));
+      ui_.batteryCMU1Cell5VoltageLabel().setText(QString::number(cellVoltages[4], 'f', 3));
+      ui_.batteryCMU1Cell6VoltageLabel().setText(QString::number(cellVoltages[5], 'f', 3));
+      ui_.batteryCMU1Cell7VoltageLabel().setText(QString::number(cellVoltages[6], 'f', 3));
+      ui_.batteryCMU1Cell8VoltageLabel().setText(QString::number(cellVoltages[7], 'f', 3));
    }
 }
 
 void CompactView::mod1CellTemperatureReceived(double mod1PcbTemperature)
 {
-   ui_.setBatteryCMU2Temp().setNum(mod1PcbTemperature);
+   ui_.batteryCMU2TempLabel().setNum(mod1PcbTemperature);
 }
 
 void CompactView::mod1CellVoltagesReceived(QList<double> cellVoltages)
 {
    if (isValuesGarbage(cellVoltages)){
-      ui_.setBatteryCMU2Cell1Voltage().setText("Err");
-      ui_.setBatteryCMU2Cell2Voltage().setText("Err");
-      ui_.setBatteryCMU2Cell3Voltage().setText("Err");
-      ui_.setBatteryCMU2Cell4Voltage().setText("Err");
-      ui_.setBatteryCMU2Cell5Voltage().setText("Err");
-      ui_.setBatteryCMU2Cell6Voltage().setText("Err");
-      ui_.setBatteryCMU2Cell7Voltage().setText("Err");
-      ui_.setBatteryCMU2Cell8Voltage().setText("Err");
+      ui_.batteryCMU2Cell1VoltageLabel().setText("Err");
+      ui_.batteryCMU2Cell2VoltageLabel().setText("Err");
+      ui_.batteryCMU2Cell3VoltageLabel().setText("Err");
+      ui_.batteryCMU2Cell4VoltageLabel().setText("Err");
+      ui_.batteryCMU2Cell5VoltageLabel().setText("Err");
+      ui_.batteryCMU2Cell6VoltageLabel().setText("Err");
+      ui_.batteryCMU2Cell7VoltageLabel().setText("Err");
+      ui_.batteryCMU2Cell8VoltageLabel().setText("Err");
    } else {
-      ui_.setBatteryCMU2Cell1Voltage().setText(QString::number(cellVoltages[0], 'f', 3));
-      ui_.setBatteryCMU2Cell2Voltage().setText(QString::number(cellVoltages[1], 'f', 3));
-      ui_.setBatteryCMU2Cell3Voltage().setText(QString::number(cellVoltages[2], 'f', 3));
-      ui_.setBatteryCMU2Cell4Voltage().setText(QString::number(cellVoltages[3], 'f', 3));
-      ui_.setBatteryCMU2Cell5Voltage().setText(QString::number(cellVoltages[4], 'f', 3));
-      ui_.setBatteryCMU2Cell6Voltage().setText(QString::number(cellVoltages[5], 'f', 3));
-      ui_.setBatteryCMU2Cell7Voltage().setText(QString::number(cellVoltages[6], 'f', 3));
-      ui_.setBatteryCMU2Cell8Voltage().setText(QString::number(cellVoltages[7], 'f', 3));
+      ui_.batteryCMU2Cell1VoltageLabel().setText(QString::number(cellVoltages[0], 'f', 3));
+      ui_.batteryCMU2Cell2VoltageLabel().setText(QString::number(cellVoltages[1], 'f', 3));
+      ui_.batteryCMU2Cell3VoltageLabel().setText(QString::number(cellVoltages[2], 'f', 3));
+      ui_.batteryCMU2Cell4VoltageLabel().setText(QString::number(cellVoltages[3], 'f', 3));
+      ui_.batteryCMU2Cell5VoltageLabel().setText(QString::number(cellVoltages[4], 'f', 3));
+      ui_.batteryCMU2Cell6VoltageLabel().setText(QString::number(cellVoltages[5], 'f', 3));
+      ui_.batteryCMU2Cell7VoltageLabel().setText(QString::number(cellVoltages[6], 'f', 3));
+      ui_.batteryCMU2Cell8VoltageLabel().setText(QString::number(cellVoltages[7], 'f', 3));
    }
 }
 
 void CompactView::mod2CellTemperatureReceived(double mod2PcbTemperature)
 {
-   ui_.setBatteryCMU3Temp().setNum(mod2PcbTemperature);
+   ui_.batteryCMU3TempLabel().setNum(mod2PcbTemperature);
 }
 
 void CompactView::mod2CellVoltagesReceived(QList<double> cellVoltages)
 {
    if (isValuesGarbage(cellVoltages)){
-      ui_.setBatteryCMU3Cell1Voltage().setText("Err");
-      ui_.setBatteryCMU3Cell2Voltage().setText("Err");
-      ui_.setBatteryCMU3Cell3Voltage().setText("Err");
-      ui_.setBatteryCMU3Cell4Voltage().setText("Err");
-      ui_.setBatteryCMU3Cell5Voltage().setText("Err");
-      ui_.setBatteryCMU3Cell6Voltage().setText("Err");
-      ui_.setBatteryCMU3Cell7Voltage().setText("Err");
-      ui_.setBatteryCMU3Cell8Voltage().setText("Err");
+      ui_.batteryCMU3Cell1VoltageLabel().setText("Err");
+      ui_.batteryCMU3Cell2VoltageLabel().setText("Err");
+      ui_.batteryCMU3Cell3VoltageLabel().setText("Err");
+      ui_.batteryCMU3Cell4VoltageLabel().setText("Err");
+      ui_.batteryCMU3Cell5VoltageLabel().setText("Err");
+      ui_.batteryCMU3Cell6VoltageLabel().setText("Err");
+      ui_.batteryCMU3Cell7VoltageLabel().setText("Err");
+      ui_.batteryCMU3Cell8VoltageLabel().setText("Err");
    } else {
-      ui_.setBatteryCMU3Cell1Voltage().setText(QString::number(cellVoltages[0], 'f', 3));
-      ui_.setBatteryCMU3Cell2Voltage().setText(QString::number(cellVoltages[1], 'f', 3));
-      ui_.setBatteryCMU3Cell3Voltage().setText(QString::number(cellVoltages[2], 'f', 3));
-      ui_.setBatteryCMU3Cell4Voltage().setText(QString::number(cellVoltages[3], 'f', 3));
-      ui_.setBatteryCMU3Cell5Voltage().setText(QString::number(cellVoltages[4], 'f', 3));
-      ui_.setBatteryCMU3Cell6Voltage().setText(QString::number(cellVoltages[5], 'f', 3));
-      ui_.setBatteryCMU3Cell7Voltage().setText(QString::number(cellVoltages[6], 'f', 3));
-      ui_.setBatteryCMU3Cell8Voltage().setText(QString::number(cellVoltages[7], 'f', 3));
+      ui_.batteryCMU3Cell1VoltageLabel().setText(QString::number(cellVoltages[0], 'f', 3));
+      ui_.batteryCMU3Cell2VoltageLabel().setText(QString::number(cellVoltages[1], 'f', 3));
+      ui_.batteryCMU3Cell3VoltageLabel().setText(QString::number(cellVoltages[2], 'f', 3));
+      ui_.batteryCMU3Cell4VoltageLabel().setText(QString::number(cellVoltages[3], 'f', 3));
+      ui_.batteryCMU3Cell5VoltageLabel().setText(QString::number(cellVoltages[4], 'f', 3));
+      ui_.batteryCMU3Cell6VoltageLabel().setText(QString::number(cellVoltages[5], 'f', 3));
+      ui_.batteryCMU3Cell7VoltageLabel().setText(QString::number(cellVoltages[6], 'f', 3));
+      ui_.batteryCMU3Cell8VoltageLabel().setText(QString::number(cellVoltages[7], 'f', 3));
    }
 }
 
 void CompactView::mod3CellTemperatureReceived(double mod3PcbTemperature)
 {
-   ui_.setBatteryCMU4Temp().setNum(mod3PcbTemperature);
+   ui_.batteryCMU4TempLabel().setNum(mod3PcbTemperature);
 }
 
 void CompactView::mod3CellVoltagesReceived(QList<double> cellVoltages)
 {
    if (isValuesGarbage(cellVoltages)){
-      ui_.setBatteryCMU4Cell1Voltage().setText("Err");
-      ui_.setBatteryCMU4Cell2Voltage().setText("Err");
-      ui_.setBatteryCMU4Cell3Voltage().setText("Err");
-      ui_.setBatteryCMU4Cell4Voltage().setText("Err");
-      ui_.setBatteryCMU4Cell5Voltage().setText("Err");
-      ui_.setBatteryCMU4Cell6Voltage().setText("Err");
-      ui_.setBatteryCMU4Cell7Voltage().setText("Err");
-      ui_.setBatteryCMU4Cell8Voltage().setText("Err");
+      ui_.batteryCMU4Cell1VoltageLabel().setText("Err");
+      ui_.batteryCMU4Cell2VoltageLabel().setText("Err");
+      ui_.batteryCMU4Cell3VoltageLabel().setText("Err");
+      ui_.batteryCMU4Cell4VoltageLabel().setText("Err");
+      ui_.batteryCMU4Cell5VoltageLabel().setText("Err");
+      ui_.batteryCMU4Cell6VoltageLabel().setText("Err");
+      ui_.batteryCMU4Cell7VoltageLabel().setText("Err");
+      ui_.batteryCMU4Cell8VoltageLabel().setText("Err");
    } else {
-      ui_.setBatteryCMU4Cell1Voltage().setText(QString::number(cellVoltages[0], 'f', 3));
-      ui_.setBatteryCMU4Cell2Voltage().setText(QString::number(cellVoltages[1], 'f', 3));
-      ui_.setBatteryCMU4Cell3Voltage().setText(QString::number(cellVoltages[2], 'f', 3));
-      ui_.setBatteryCMU4Cell4Voltage().setText(QString::number(cellVoltages[3], 'f', 3));
-      ui_.setBatteryCMU4Cell5Voltage().setText(QString::number(cellVoltages[4], 'f', 3));
-      ui_.setBatteryCMU4Cell6Voltage().setText(QString::number(cellVoltages[5], 'f', 3));
-      ui_.setBatteryCMU4Cell7Voltage().setText(QString::number(cellVoltages[6], 'f', 3));
-      ui_.setBatteryCMU4Cell8Voltage().setText(QString::number(cellVoltages[7], 'f', 3));
+      ui_.batteryCMU4Cell1VoltageLabel().setText(QString::number(cellVoltages[0], 'f', 3));
+      ui_.batteryCMU4Cell2VoltageLabel().setText(QString::number(cellVoltages[1], 'f', 3));
+      ui_.batteryCMU4Cell3VoltageLabel().setText(QString::number(cellVoltages[2], 'f', 3));
+      ui_.batteryCMU4Cell4VoltageLabel().setText(QString::number(cellVoltages[3], 'f', 3));
+      ui_.batteryCMU4Cell5VoltageLabel().setText(QString::number(cellVoltages[4], 'f', 3));
+      ui_.batteryCMU4Cell6VoltageLabel().setText(QString::number(cellVoltages[5], 'f', 3));
+      ui_.batteryCMU4Cell7VoltageLabel().setText(QString::number(cellVoltages[6], 'f', 3));
+      ui_.batteryCMU4Cell8VoltageLabel().setText(QString::number(cellVoltages[7], 'f', 3));
    }
 }
 
@@ -427,14 +427,14 @@ void CompactView::highlightUntrustedVoltages()
 
 void CompactView::connectionFailed(const QString& errorString)
 {
-   ui_.setInputSerialConnectionStatus().setText(errorString);
-   ui_.setInputSerialConnectionStatus().setStyleSheet("text-align: centre; color: rgb(255, 40, 40); background-color: rgb(70,70,70);"); // red text
+   ui_.inputSerialConnectionStatusLabel().setText(errorString);
+   ui_.inputSerialConnectionStatusLabel().setStyleSheet("text-align: centre; color: rgb(255, 40, 40); background-color: rgb(70,70,70);"); // red text
 }
 
 void CompactView::connectionSucceeded()
 {
-   ui_.setInputSerialConnectionStatus().setText("Connected");
-   ui_.setInputSerialConnectionStatus().setStyleSheet("text-align: centre; color: rgb(0, 255, 0); background-color: rgb(70,70,70);");
+   ui_.inputSerialConnectionStatusLabel().setText("Connected");
+   ui_.inputSerialConnectionStatusLabel().setStyleSheet("text-align: centre; color: rgb(0, 255, 0); background-color: rgb(70,70,70);");
 }
 void CompactView::motorOneFaultsReceived(MotorFaults motorFaults)
 {

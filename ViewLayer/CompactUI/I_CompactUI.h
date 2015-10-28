@@ -8,77 +8,77 @@ class I_CompactUI
 public:
     virtual ~I_CompactUI() {}
 
-    virtual QLabel& setMppt1Efficiency() = 0;
-    virtual QLabel& setMppt2Efficiency() = 0;
-    virtual QLabel& setMppt3Efficiency() = 0;
-    virtual QLabel& setMppt4Efficiency() = 0;
-    virtual QLabel& setMppt5Efficiency() = 0;
-    virtual QLabel& setMppt6Efficiency() = 0;
-    virtual QLabel& setMppt7Efficiency() = 0;
+    virtual QLabel& mppt1EfficiencyLabel() = 0;
+    virtual QLabel& mppt2EfficiencyLabel() = 0;
+    virtual QLabel& mppt3EfficiencyLabel() = 0;
+    virtual QLabel& mppt4EfficiencyLabel() = 0;
+    virtual QLabel& mppt5EfficiencyLabel() = 0;
+    virtual QLabel& mppt6EfficiencyLabel() = 0;
+    virtual QLabel& mppt7EfficiencyLabel() = 0;
 
-    virtual QLabel& setMppt1PowerIn() = 0;
-    virtual QLabel& setMppt2PowerIn() = 0;
-    virtual QLabel& setMppt3PowerIn() = 0;
-    virtual QLabel& setMppt4PowerIn() = 0;
-    virtual QLabel& setMppt5PowerIn() = 0;
-    virtual QLabel& setMppt6PowerIn() = 0;
-    virtual QLabel& setMppt7PowerIn() = 0;
+    virtual QLabel& mppt1PowerInLabel() = 0;
+    virtual QLabel& mppt2PowerInLabel() = 0;
+    virtual QLabel& mppt3PowerInLabel() = 0;
+    virtual QLabel& mppt4PowerInLabel() = 0;
+    virtual QLabel& mppt5PowerInLabel() = 0;
+    virtual QLabel& mppt6PowerInLabel() = 0;
+    virtual QLabel& mppt7PowerInLabel() = 0;
 
-    virtual QLabel& setMppt1PowerOut() = 0;
-    virtual QLabel& setMppt2PowerOut() = 0;
-    virtual QLabel& setMppt3PowerOut() = 0;
-    virtual QLabel& setMppt4PowerOut() = 0;
-    virtual QLabel& setMppt5PowerOut() = 0;
-    virtual QLabel& setMppt6PowerOut() = 0;
-    virtual QLabel& setMppt7PowerOut() = 0;
+    virtual QLabel& mppt1PowerOutLabel() = 0;
+    virtual QLabel& mppt2PowerOutLabel() = 0;
+    virtual QLabel& mppt3PowerOutLabel() = 0;
+    virtual QLabel& mppt4PowerOutLabel() = 0;
+    virtual QLabel& mppt5PowerOutLabel() = 0;
+    virtual QLabel& mppt6PowerOutLabel() = 0;
+    virtual QLabel& mppt7PowerOutLabel() = 0;
 
-    virtual QLabel& setSetSpeed() = 0;
-    virtual QLabel& setSetCurrent() = 0;
-    virtual QLabel& setActualSpeed() = 0;
-    virtual QLabel& setBusCurrent() = 0;
-    virtual QLabel& setBusVoltage() = 0;
-    virtual QLabel& setBatteryCurrent() = 0;
-    virtual QLabel& setBatteryVoltage() = 0;
+    virtual QLabel& setSpeedLabel() = 0;
+    virtual QLabel& setCurrentLabel() = 0;
+    virtual QLabel& actualSpeedLabel() = 0;
+    virtual QLabel& busCurrentLabel() = 0;
+    virtual QLabel& busVoltageLabel() = 0;
+    virtual QLabel& batteryCurrentLabel() = 0;
+    virtual QLabel& batteryVoltageLabel() = 0;
 
-    virtual QLabel& setBatteryCMU1Temp() = 0;
-    virtual QLabel& setBatteryCMU1Cell1Voltage() = 0;
-    virtual QLabel& setBatteryCMU1Cell2Voltage() = 0;
-    virtual QLabel& setBatteryCMU1Cell3Voltage() = 0;
-    virtual QLabel& setBatteryCMU1Cell4Voltage() = 0;
-    virtual QLabel& setBatteryCMU1Cell5Voltage() = 0;
-    virtual QLabel& setBatteryCMU1Cell6Voltage() = 0;
-    virtual QLabel& setBatteryCMU1Cell7Voltage() = 0;
-    virtual QLabel& setBatteryCMU1Cell8Voltage() = 0;
+    virtual QLabel& batteryCMU1TempLabel() = 0;
+    virtual QLabel& batteryCMU1Cell1VoltageLabel() = 0;
+    virtual QLabel& batteryCMU1Cell2VoltageLabel() = 0;
+    virtual QLabel& batteryCMU1Cell3VoltageLabel() = 0;
+    virtual QLabel& batteryCMU1Cell4VoltageLabel() = 0;
+    virtual QLabel& batteryCMU1Cell5VoltageLabel() = 0;
+    virtual QLabel& batteryCMU1Cell6VoltageLabel() = 0;
+    virtual QLabel& batteryCMU1Cell7VoltageLabel() = 0;
+    virtual QLabel& batteryCMU1Cell8VoltageLabel() = 0;
 
-    virtual QLabel& setBatteryCMU2Temp() = 0;
-    virtual QLabel& setBatteryCMU2Cell1Voltage() = 0;
-    virtual QLabel& setBatteryCMU2Cell2Voltage() = 0;
-    virtual QLabel& setBatteryCMU2Cell3Voltage() = 0;
-    virtual QLabel& setBatteryCMU2Cell4Voltage() = 0;
-    virtual QLabel& setBatteryCMU2Cell5Voltage() = 0;
-    virtual QLabel& setBatteryCMU2Cell6Voltage() = 0;
-    virtual QLabel& setBatteryCMU2Cell7Voltage() = 0;
-    virtual QLabel& setBatteryCMU2Cell8Voltage() = 0;
+    virtual QLabel& batteryCMU2TempLabel() = 0;
+    virtual QLabel& batteryCMU2Cell1VoltageLabel() = 0;
+    virtual QLabel& batteryCMU2Cell2VoltageLabel() = 0;
+    virtual QLabel& batteryCMU2Cell3VoltageLabel() = 0;
+    virtual QLabel& batteryCMU2Cell4VoltageLabel() = 0;
+    virtual QLabel& batteryCMU2Cell5VoltageLabel() = 0;
+    virtual QLabel& batteryCMU2Cell6VoltageLabel() = 0;
+    virtual QLabel& batteryCMU2Cell7VoltageLabel() = 0;
+    virtual QLabel& batteryCMU2Cell8VoltageLabel() = 0;
 
-    virtual QLabel& setBatteryCMU3Temp() = 0;
-    virtual QLabel& setBatteryCMU3Cell1Voltage() = 0;
-    virtual QLabel& setBatteryCMU3Cell2Voltage() = 0;
-    virtual QLabel& setBatteryCMU3Cell3Voltage() = 0;
-    virtual QLabel& setBatteryCMU3Cell4Voltage() = 0;
-    virtual QLabel& setBatteryCMU3Cell5Voltage() = 0;
-    virtual QLabel& setBatteryCMU3Cell6Voltage() = 0;
-    virtual QLabel& setBatteryCMU3Cell7Voltage() = 0;
-    virtual QLabel& setBatteryCMU3Cell8Voltage() = 0;
+    virtual QLabel& batteryCMU3TempLabel() = 0;
+    virtual QLabel& batteryCMU3Cell1VoltageLabel() = 0;
+    virtual QLabel& batteryCMU3Cell2VoltageLabel() = 0;
+    virtual QLabel& batteryCMU3Cell3VoltageLabel() = 0;
+    virtual QLabel& batteryCMU3Cell4VoltageLabel() = 0;
+    virtual QLabel& batteryCMU3Cell5VoltageLabel() = 0;
+    virtual QLabel& batteryCMU3Cell6VoltageLabel() = 0;
+    virtual QLabel& batteryCMU3Cell7VoltageLabel() = 0;
+    virtual QLabel& batteryCMU3Cell8VoltageLabel() = 0;
 
-    virtual QLabel& setBatteryCMU4Temp() = 0;
-    virtual QLabel& setBatteryCMU4Cell1Voltage() = 0;
-    virtual QLabel& setBatteryCMU4Cell2Voltage() = 0;
-    virtual QLabel& setBatteryCMU4Cell3Voltage() = 0;
-    virtual QLabel& setBatteryCMU4Cell4Voltage() = 0;
-    virtual QLabel& setBatteryCMU4Cell5Voltage() = 0;
-    virtual QLabel& setBatteryCMU4Cell6Voltage() = 0;
-    virtual QLabel& setBatteryCMU4Cell7Voltage() = 0;
-    virtual QLabel& setBatteryCMU4Cell8Voltage() = 0;
+    virtual QLabel& batteryCMU4TempLabel() = 0;
+    virtual QLabel& batteryCMU4Cell1VoltageLabel() = 0;
+    virtual QLabel& batteryCMU4Cell2VoltageLabel() = 0;
+    virtual QLabel& batteryCMU4Cell3VoltageLabel() = 0;
+    virtual QLabel& batteryCMU4Cell4VoltageLabel() = 0;
+    virtual QLabel& batteryCMU4Cell5VoltageLabel() = 0;
+    virtual QLabel& batteryCMU4Cell6VoltageLabel() = 0;
+    virtual QLabel& batteryCMU4Cell7VoltageLabel() = 0;
+    virtual QLabel& batteryCMU4Cell8VoltageLabel() = 0;
 
     virtual QList<QLabel*>& batteryCMUCellVoltageLabels() = 0;
 
@@ -93,6 +93,6 @@ public:
     virtual QLabel& cellOverTemperatureLabel() = 0;
     virtual QLabel& cmuCommunicationsTimeoutLabel() = 0;
 
-    virtual QLabel& setInputSerialConnectionStatus() = 0;
-    virtual QLabel& setOutput3GConnectionStatus() = 0;
+    virtual QLabel& inputSerialConnectionStatusLabel() = 0;
+    virtual QLabel& output3GConnectionStatusLabel() = 0;
 };
