@@ -4,12 +4,12 @@
 #include <QString>
 #include "I_CommDevice.h"
 
-class RadioConnectionService : public I_CommDevice
+class RadioCommDevice : public I_CommDevice
 {
    Q_OBJECT
 public:
-   RadioConnectionService(QSerialPort& serialPort);
-   virtual ~RadioConnectionService();
+   RadioCommDevice(QSerialPort& serialPort);
+   virtual ~RadioCommDevice();
 
 private slots:
    void handleSerialDataIncoming();

@@ -2,7 +2,7 @@
 #include <QUdpSocket>
 
 #include "../DataLayer/DataContainer.h"
-#include "CommDeviceControl/RadioConnectionService.h"
+#include "CommDeviceControl/RadioCommDevice.h"
 #include "CommDeviceControl/UdpMessageForwarder.h"
 #include "CommunicationContainer.h"
 #include "DataPopulators/BatteryPopulator.h"
@@ -50,7 +50,7 @@ public:
    }
 
    QSerialPort serialPort;
-   RadioConnectionService radioConnectionService;
+   RadioCommDevice radioConnectionService;
    UdpMessageForwarder messageForwarder;
    PacketSynchronizer packetSynchronizer;
    PacketUnstuffer packetUnstuffer;

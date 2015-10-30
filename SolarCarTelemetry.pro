@@ -16,7 +16,7 @@ SOURCES += \
     BusinessLayer/BusinessContainer.cpp \
     BusinessLayer/LoggerService/LoggerService.cpp \
     BusinessLayer/CommunicationsMonitoringService/CommunicationsMonitoringService.cpp \
-    CommunicationLayer/CommDeviceControl/RadioConnectionService.cpp \
+    CommunicationLayer/CommDeviceControl/RadioCommDevice.cpp \
     CommunicationLayer/CommDeviceControl/UdpMessageForwarder.cpp \
     CommunicationLayer/CommunicationContainer.cpp \
     CommunicationLayer/DataPopulators/BatteryPopulator.cpp \
@@ -67,7 +67,7 @@ HEADERS  += \
     BusinessLayer/CommunicationsMonitoringService/CommunicationsMonitoringService.h \
     BusinessLayer/CommunicationsMonitoringService/I_CommunicationsMonitoringService.h \
     CommunicationLayer/CommDeviceControl/I_CommDevice.h \
-    CommunicationLayer/CommDeviceControl/RadioConnectionService.h \
+    CommunicationLayer/CommDeviceControl/RadioCommDevice.h \
     CommunicationLayer/CommDeviceControl/UdpMessageForwarder.h \
     CommunicationLayer/CommunicationContainer.h \
     CommunicationLayer/DataPopulators/BatteryPopulator.h \

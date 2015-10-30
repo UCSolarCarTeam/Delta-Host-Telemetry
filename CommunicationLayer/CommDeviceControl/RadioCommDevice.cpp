@@ -1,14 +1,14 @@
 #include <QDebug>
 #include <QTimer>
-#include "RadioConnectionService.h"
+#include "RadioCommDevice.h"
 
 namespace
 {
-   const QString DEFAULT_PORT_NAME = "/dev/ttyAMA0";
+   const QString DEFAULT_PORT_NAME = "dev/ttyAMA0";
    const int DEFAULT_BAUDRATE = 9600;
 }
 
-RadioConnectionService::RadioConnectionService(QSerialPort& serialPort)
+RadioCommDevice::RadioCommDevice(QSerialPort& serialPort)
 : serialPort_(serialPort)
 {
    setSerialParameters(DEFAULT_PORT_NAME, DEFAULT_BAUDRATE);
@@ -17,17 +17,17 @@ RadioConnectionService::RadioConnectionService(QSerialPort& serialPort)
    QTimer::singleShot(0, this, SLOT(connectToDataSource()));
 }
 
-RadioConnectionService::~RadioConnectionService()
+RadioCommDevice::~RadioCommDevice()
 {
 }
 
-void RadioConnectionService::setSerialParameters(QString serialPortName, int baudRate)
+void RadioCommDevice::setSerialParameters(QString serialPortName, int baudRate)
 {
    serialPort_.setPortName(serialPortName);
    serialPort_.setBaudRate(baudRate);
 }
 
-bool RadioConnectionService::connectToDataSource()
+bool RadioCommDevice::connectToDataSource()
 {
    if (serialPort_.open(QIODevice::ReadWrite))
    {
@@ -44,7 +44,7 @@ bool RadioConnectionService::connectToDataSource()
    }
 }
 
-void RadioConnectionService::handleSerialDataIncoming()
+void RadioCommDevice::handleSerialDataIncoming()
 {
    QByteArray incomingData = serialPort_.readAll();
    if (incomingData.isEmpty())
