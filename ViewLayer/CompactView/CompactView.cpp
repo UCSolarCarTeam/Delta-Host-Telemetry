@@ -145,6 +145,22 @@ bool CompactView::isLabelRed(QLabel& label)
       return false;
    }
 }
+void CompactView::setFaultFlagRed(QLabel& faultLabel)
+{
+    faultLabel.setStyleSheet("background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 rgb(176, 13, 13), stop: 1 red);font-size: 18px;margin:5px;");
+}
+void CompactView::setFaultFlagGreen(QLabel& faultLabel)
+{
+    faultLabel.setStyleSheet("background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 rgb(40, 176, 13), stop: 1 green);font-size: 18px;margin:5px;");
+}
+void CompactView::setConnectionLabelSuccessful(QLabel& connectionLabel)
+{
+    connectionLabel.setStyleSheet("text-align: centre;centre; color: rgb(0, 255, 0);background-color: rgb(70,70,70);margin: 15px;margin-top: 0px;margin-bottom: 15px;font-size: 14px;");
+}
+void CompactView::setConnectionLabelFailed(QLabel& connectionLabel)
+{
+    connectionLabel.setStyleSheet("text-align: centre;color: rgb(255, 40, 40);background-color: rgb(70,70,70);margin: 15px;margin-top: 0px;margin-bottom: 15px;font-size: 14px;");
+}
 
 void CompactView::mppt1PowerInReceived(double mppt1PowerIn)
 {
@@ -427,65 +443,65 @@ void CompactView::highlightUntrustedVoltages()
 
 void CompactView::connectionFailed(const QString& errorString)
 {
-   ui_.inputSerialConnectionStatusLabel().setText(errorString);
-   ui_.inputSerialConnectionStatusLabel().setStyleSheet("text-align: centre; color: rgb(255, 40, 40); background-color: rgb(70,70,70);"); // red text
+    ui_.inputSerialConnectionStatusLabel().setText(errorString);
+    setConnectionLabelFailed(ui_.inputSerialConnectionStatusLabel());
 }
-
 void CompactView::connectionSucceeded()
 {
    ui_.inputSerialConnectionStatusLabel().setText("Connected");
-   ui_.inputSerialConnectionStatusLabel().setStyleSheet("text-align: centre; color: rgb(0, 255, 0); background-color: rgb(70,70,70);");
+   setConnectionLabelSuccessful(ui_.inputSerialConnectionStatusLabel());
 }
+
 void CompactView::motorOneFaultsReceived(MotorFaults motorFaults)
 {
    if(motorFaults.softwareOverCurrent() && !isLabelRed(ui_.softwareOverCurrentLabel1())){
-      ui_.softwareOverCurrentLabel1().setStyleSheet("background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 rgb(176, 13, 13), stop: 1 red);");
+      setFaultFlagRed(ui_.softwareOverCurrentLabel1());
    } else{
-      ui_.softwareOverCurrentLabel1().setStyleSheet("");
+      setFaultFlagGreen(ui_.softwareOverCurrentLabel1());
    }
 
    if(motorFaults.hardwareOverCurrent() && !isLabelRed(ui_.hardwareOverCurrentLabel1())){
-      ui_.hardwareOverCurrentLabel1().setStyleSheet("background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 rgb(176, 13, 13), stop: 1 red);");
+      setFaultFlagRed(ui_.hardwareOverCurrentLabel1());
    } else {
-      ui_.hardwareOverCurrentLabel1().setStyleSheet("");
+      setFaultFlagGreen(ui_.hardwareOverCurrentLabel1());
    }
 }
 void CompactView::motorTwoFaultsReceived(MotorFaults motorFaults)
 {
    if(motorFaults.softwareOverCurrent() && !isLabelRed(ui_.softwareOverCurrentLabel2())){
-      ui_.softwareOverCurrentLabel2().setStyleSheet("background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 rgb(176, 13, 13), stop: 1 red);");
+      setFaultFlagRed(ui_.softwareOverCurrentLabel2());
    } else {
-      ui_.softwareOverCurrentLabel2().setStyleSheet("");
+      setFaultFlagGreen(ui_.softwareOverCurrentLabel2());
    }
 
    if(motorFaults.hardwareOverCurrent() && !isLabelRed(ui_.hardwareOverCurrentLabel2())){
-      ui_.hardwareOverCurrentLabel2().setStyleSheet("background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 rgb(176, 13, 13), stop: 1 red);");
+      setFaultFlagRed(ui_.hardwareOverCurrentLabel2());
    } else {
-      ui_.hardwareOverCurrentLabel2().setStyleSheet("");
+      setFaultFlagGreen(ui_.hardwareOverCurrentLabel2());
    }
 }
 void CompactView::batteryFaultsReceived(BatteryFaults batteryFaults)
 {
    if(batteryFaults.cellOverVoltage() && !isLabelRed(ui_.cellOverVoltageLabel())){
-      ui_.cellOverVoltageLabel().setStyleSheet("background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 rgb(176, 13, 13), stop: 1 red);");
+      setFaultFlagRed(ui_.cellOverVoltageLabel());
    } else {
-      ui_.cellOverVoltageLabel().setStyleSheet("");
+      setFaultFlagGreen(ui_.cellOverVoltageLabel());
    }
 
    if(batteryFaults.cellUnderVoltage() && !isLabelRed(ui_.cellUnderVoltageLabel())){
-      ui_.cellUnderVoltageLabel().setStyleSheet("background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 rgb(176, 13, 13), stop: 1 red);");
+      setFaultFlagRed(ui_.cellUnderVoltageLabel());
    } else {
-      ui_.cellUnderVoltageLabel().setStyleSheet("");
+      setFaultFlagGreen(ui_.cellUnderVoltageLabel());
    }
 
    if(batteryFaults.cellOverTemperature() && !isLabelRed(ui_.cellOverTemperatureLabel())){
-      ui_.cellOverTemperatureLabel().setStyleSheet("background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 rgb(176, 13, 13), stop: 1 red);");
+      setFaultFlagRed(ui_.cellOverTemperatureLabel());
    } else {
-      ui_.cellOverTemperatureLabel().setStyleSheet("");
+      setFaultFlagGreen(ui_.cellOverTemperatureLabel());
    }
    if(batteryFaults.cmuCommTimeout() && !isLabelRed(ui_.cmuCommunicationsTimeoutLabel())){
-      ui_.cmuCommunicationsTimeoutLabel().setStyleSheet("background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 rgb(176, 13, 13), stop: 1 red);");
+      setFaultFlagRed(ui_.cmuCommunicationsTimeoutLabel());
    } else {
-      ui_.cmuCommunicationsTimeoutLabel().setStyleSheet("");
+      setFaultFlagGreen(ui_.cmuCommunicationsTimeoutLabel());
    }
 }

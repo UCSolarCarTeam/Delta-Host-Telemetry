@@ -4,7 +4,7 @@
 
 namespace
 {
-   const QString DEFAULT_PORT_NAME = "dev/ttyAMA0";
+   const QString DEFAULT_PORT_NAME = "/dev/pts/7";
    const int DEFAULT_BAUDRATE = 9600;
 }
 

@@ -31,7 +31,10 @@ public:
 private:
     bool isLabelRed(QLabel&);
     bool isValuesGarbage(QList<double> values);
-
+    void setFaultFlagRed(QLabel&);
+    void setFaultFlagGreen(QLabel&);
+    void setConnectionLabelSuccessful(QLabel&);
+    void setConnectionLabelFailed(QLabel&);
     BatteryPresenter& batteryPresenter_;
     VehiclePresenter& vehiclePresenter_;
     PowerPresenter& powerPresenter_;
