@@ -43,6 +43,7 @@ private:
     MpptPresenter& mpptPresenter_;
 
     I_CompactUI& ui_;
+    QList<QLabel*> batteryCMUCellVoltageLabels_;
 
 private slots:
     void driverSetSpeedMetersPerSecondReceived(double);

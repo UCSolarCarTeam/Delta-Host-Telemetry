@@ -124,6 +124,41 @@ CompactView::CompactView(BatteryPresenter& batteryPresenter,
    connect(&faultsPresenter_, SIGNAL(batteryFaultsReceived(BatteryFaults)),
       this, SLOT(batteryFaultsReceived(BatteryFaults)));
 
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU1Cell1VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU1Cell2VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU1Cell3VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU1Cell4VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU1Cell5VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU1Cell6VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU1Cell7VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU1Cell8VoltageLabel());
+
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU2Cell1VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU2Cell2VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU2Cell3VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU2Cell4VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU2Cell5VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU2Cell6VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU2Cell7VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU2Cell8VoltageLabel());
+
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU3Cell1VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU3Cell2VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU3Cell3VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU3Cell4VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU3Cell5VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU3Cell6VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU3Cell7VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU3Cell8VoltageLabel());
+
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU4Cell1VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU4Cell2VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU4Cell3VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU4Cell4VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU4Cell5VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU4Cell6VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU4Cell7VoltageLabel());
+   batteryCMUCellVoltageLabels_.append(&ui_.batteryCMU4Cell8VoltageLabel());
 }
 CompactView::~CompactView()
 {
@@ -400,12 +435,12 @@ void CompactView::mod3CellVoltagesReceived(QList<double> cellVoltages)
 
 void CompactView::highlightMinMaxVoltages()
 {
-   QLabel* newMaxVoltageLabel = ui_.batteryCMUCellVoltageLabels()[0];
+   QLabel* newMaxVoltageLabel = batteryCMUCellVoltageLabels_[0];
    double newMaxVoltage = newMaxVoltageLabel->text().toFloat();
-   QLabel* newMinVoltageLabel = ui_.batteryCMUCellVoltageLabels()[0];
+   QLabel* newMinVoltageLabel = batteryCMUCellVoltageLabels_[0];
    double newMinVoltage = newMinVoltageLabel->text().toFloat();
 
-   foreach(QLabel* cursorVoltageLabel, ui_.batteryCMUCellVoltageLabels())
+   foreach(QLabel* cursorVoltageLabel, batteryCMUCellVoltageLabels_)
    {
       double cursorVoltage = cursorVoltageLabel->text().toFloat();
       cursorVoltageLabel->setStyleSheet("");
@@ -430,7 +465,7 @@ void CompactView::highlightMinMaxVoltages()
 
 void CompactView::highlightUntrustedVoltages()
 {
-   foreach(QLabel* cursorVoltageLabel, ui_.batteryCMUCellVoltageLabels())
+   foreach(QLabel* cursorVoltageLabel, batteryCMUCellVoltageLabels_)
    {
       if(cursorVoltageLabel->text().toFloat() < 0)
       {

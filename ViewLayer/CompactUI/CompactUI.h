@@ -86,8 +86,6 @@ public:
     QLabel& batteryCMU4Cell7VoltageLabel();
     QLabel& batteryCMU4Cell8VoltageLabel();
 
-    QList<QLabel*>& batteryCMUCellVoltageLabels();
-
     QLabel& softwareOverCurrentLabel1();
     QLabel& hardwareOverCurrentLabel1();
 
@@ -104,5 +102,4 @@ public:
 
 private:
     Ui::CompactUI *ui;
-    QList<QLabel*> batteryCMUCellVoltageLabels_;
 };

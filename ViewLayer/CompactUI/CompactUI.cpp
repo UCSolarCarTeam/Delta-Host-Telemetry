@@ -5,42 +5,6 @@ CompactUI::CompactUI()
     :ui(new Ui::CompactUI)
 {
     ui->setupUi(this);
-
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU1Cell1Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU1Cell2Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU1Cell3Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU1Cell4Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU1Cell5Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU1Cell6Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU1Cell7Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU1Cell8Voltage);
-
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU2Cell1Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU2Cell2Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU2Cell3Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU2Cell4Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU2Cell5Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU2Cell6Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU2Cell7Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU2Cell8Voltage);
-
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU3Cell1Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU3Cell2Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU3Cell3Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU3Cell4Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU3Cell5Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU3Cell6Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU3Cell7Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU3Cell8Voltage);
-
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU4Cell1Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU4Cell2Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU4Cell3Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU4Cell4Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU4Cell5Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU4Cell6Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU4Cell7Voltage);
-    batteryCMUCellVoltageLabels_.append(ui->batteryCMU4Cell8Voltage);
 }
 
 CompactUI::~CompactUI()
@@ -312,10 +276,6 @@ QLabel& CompactUI::mppt7EfficiencyLabel()
     return *ui->mppt7Efficiency;
 }
 
-QList<QLabel*>& CompactUI::batteryCMUCellVoltageLabels()
-{
-    return batteryCMUCellVoltageLabels_;
-}
 QLabel& CompactUI::softwareOverCurrentLabel1()
 {
    return *ui->softwareOverCurrentLabel1;

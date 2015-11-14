@@ -80,8 +80,6 @@ public:
     virtual QLabel& batteryCMU4Cell7VoltageLabel() = 0;
     virtual QLabel& batteryCMU4Cell8VoltageLabel() = 0;
 
-    virtual QList<QLabel*>& batteryCMUCellVoltageLabels() = 0;
-
     virtual QLabel& softwareOverCurrentLabel1() = 0;
     virtual QLabel& hardwareOverCurrentLabel1() = 0;
 
