@@ -7,8 +7,7 @@ before_install:
  - sudo apt-get install qt5-default qttools5-dev-tools
 
 install:
- - chmod +x installQTSerialPort.sh
- - ./installQTSerialPort.sh
+
 script: 
  - qmake -project
  - qmake SolarCarHostTelemetry.pro
