@@ -27,15 +27,15 @@
 
 #include <QObject>
 
-class OverlordWidget;
+class CompactUI;
 
 class DisplayView : public QObject
 {
    Q_OBJECT
 public:
-   DisplayView(OverlordWidget& ui);
+   DisplayView(CompactUI& ui);
    ~DisplayView();
 
 private:
-   OverlordWidget& ui_;
+   CompactUI& ui_;
 };

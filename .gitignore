@@ -7,4 +7,6 @@ moc_*
 build*
 *.user*
 *.orig
+*.sublime-workspace
 object_script.*
+

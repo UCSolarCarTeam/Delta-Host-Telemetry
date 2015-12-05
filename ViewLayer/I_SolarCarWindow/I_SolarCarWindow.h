@@ -29,9 +29,7 @@
 
 class I_SolarCarWindow : public QWidget
 {
-	Q_OBJECT
+   Q_OBJECT
 public:
-	virtual ~I_SolarCarWindow() {}
-
-	virtual void hideHeaderBar() = 0;
+   virtual ~I_SolarCarWindow() {}
 };

@@ -46,9 +46,9 @@ public:
    I_FaultsData& faultsData();
 
 private:
-	QScopedPointer<I_MpptData> mpptData_;
-	QScopedPointer<I_VehicleData> vehicleData_;
-	QScopedPointer<I_PowerData> powerData_;
-	QScopedPointer<I_BatteryData> batteryData_;
+   QScopedPointer<I_MpptData> mpptData_;
+   QScopedPointer<I_VehicleData> vehicleData_;
+   QScopedPointer<I_PowerData> powerData_;
+   QScopedPointer<I_BatteryData> batteryData_;
    QScopedPointer<I_FaultsData> faultsData_;
 };

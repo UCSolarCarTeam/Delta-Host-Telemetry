@@ -33,9 +33,8 @@ VehicleData::~VehicleData()
 {
 }
 
-/*PowerData "Gets"*/
 double VehicleData::driverSetSpeedMetersPerSecond() const
-{   
+{
    return driverSetSpeedMetersPerSecond_;
 }
 
@@ -72,7 +71,6 @@ double VehicleData::transmittedErrorCount() const
    return transmittedErrorCount_;
 }
 
-/*PowerData "Sets"*/
 void VehicleData::setDriverSetSpeedMetersPerSecond(double driverSetSpeedMetersPerSecond)
 {
    driverSetSpeedMetersPerSecond_ = driverSetSpeedMetersPerSecond;
@@ -117,5 +115,3 @@ void VehicleData::setTransmittedErrorCount(double transmittedErrorCount)
    transmittedErrorCount_ = transmittedErrorCount;
    emit transmittedErrorCountReceived(transmittedErrorCount_);
 }
-
-

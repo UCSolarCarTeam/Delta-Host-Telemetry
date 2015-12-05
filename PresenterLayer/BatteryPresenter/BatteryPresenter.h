@@ -30,14 +30,14 @@ class I_BatteryData;
 
 class BatteryPresenter : public QObject
 {
-	Q_OBJECT
+   Q_OBJECT
 public:
-	explicit BatteryPresenter(const I_BatteryData& batteryData);
+   explicit BatteryPresenter(const I_BatteryData& batteryData);
 
 private:
-	void relayBatteryData();
+   void relayBatteryData();
 
-	const I_BatteryData& batteryData_;
+   const I_BatteryData& batteryData_;
 
 signals:
    void mod0PcbTemperatureReceived(double mod0PcbTemperature);
