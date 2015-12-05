@@ -23,12 +23,12 @@
  *  For further contact, email <software@calgarysolarcar.ca>
  */
 
-#include "SolarCarTelemetry.h"
+#include "SolarCarHostTelemetry.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
-   QScopedPointer<SolarCarTelemetry> app;
-   app.reset(new SolarCarTelemetry(argc, argv));
+   QScopedPointer<SolarCarHostTelemetry> app;
+   app.reset(new SolarCarHostTelemetry(argc, argv));
    return app->exec();
 }

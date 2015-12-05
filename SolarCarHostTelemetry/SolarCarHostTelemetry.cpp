@@ -23,27 +23,26 @@
  *  For further contact, email <software@calgarysolarcar.ca>
  */
 
-#pragma once
+#include "DataLayer/DataContainer.h"
+#include "CommunicationLayer/CommunicationContainer.h"
+#include "BusinessLayer/BusinessContainer.h"
+#include "PresenterLayer/PresenterContainer.h"
+#include "ViewLayer/ViewContainer.h"
 
-#include <QApplication>
-#include <QScopedPointer>
+#include "SolarCarHostTelemetry.h"
 
-class CommunicationContainer;
-class DataContainer;
-class BusinessContainer;
-class PresenterContainer;
-class ViewContainer;
-
-class SolarCarTelemetry : public QApplication
+SolarCarHostTelemetry::SolarCarHostTelemetry(int& argc, char** argv)
+: QApplication(argc, argv)
+, dataContainer_(new DataContainer())
+, communicationContainer_(new CommunicationContainer(*dataContainer_))
+, businessContainer_(new BusinessContainer(*communicationContainer_))
+, presenterContainer_(new PresenterContainer(*dataContainer_,
+      *communicationContainer_,
+      *businessContainer_))
+, viewContainer_(new ViewContainer(*presenterContainer_))
 {
-public:
-   SolarCarTelemetry(int &argc, char **argv);
-   ~SolarCarTelemetry();
+}
 
-private:
-   QScopedPointer<DataContainer> dataContainer_;
-   QScopedPointer<CommunicationContainer> communicationContainer_;
-   QScopedPointer<BusinessContainer> businessContainer_;
-   QScopedPointer<PresenterContainer> presenterContainer_;
-   QScopedPointer<ViewContainer> viewContainer_;
-};
+SolarCarHostTelemetry::~SolarCarHostTelemetry()
+{
+}

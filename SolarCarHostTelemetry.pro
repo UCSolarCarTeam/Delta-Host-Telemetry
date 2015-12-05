@@ -32,7 +32,7 @@ QT       += core gui serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets network
 
-TARGET = ../release/SolarCarTelemetry
+TARGET = ../release/SolarCarHostTelemetry
 TEMPLATE = app
 CONFIG += static
 
@@ -86,8 +86,8 @@ SOURCES += \
     PresenterLayer/PowerPresenter/PowerPresenter.cpp \
     PresenterLayer/PresenterContainer.cpp \
     PresenterLayer/VehiclePresenter/VehiclePresenter.cpp \
-    SolarCarTelemetry/main.cpp \
-    SolarCarTelemetry/SolarCarTelemetry.cpp \
+    SolarCarHostTelemetry/main.cpp \
+    SolarCarHostTelemetry/SolarCarHostTelemetry.cpp \
     ViewLayer/DisplayView/DisplayView.cpp \
     ViewLayer/ViewContainer.cpp \
     ViewLayer/CompactUI/CompactUI.cpp \
@@ -147,7 +147,7 @@ HEADERS  += \
     PresenterLayer/PowerPresenter/PowerPresenter.h \
     PresenterLayer/PresenterContainer.h \
     PresenterLayer/VehiclePresenter/VehiclePresenter.h \
-    SolarCarTelemetry/SolarCarTelemetry.h \
+    SolarCarHostTelemetry/SolarCarHostTelemetry.h \
     ViewLayer/DisplayView/DisplayView.h \
     ViewLayer/I_SolarCarWindow/I_SolarCarWindow.h \
     ViewLayer/CompactUI/CompactUI.h \
