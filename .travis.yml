@@ -5,14 +5,13 @@ before_install:
  - sudo apt-get -qq update
  - sudo apt-get install qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev
  - sudo apt-get install qt5-default qttools5-dev-tools
+
+install:
  - sudo dpkg --configure -a 
  - sudo dpkg -i Dependencies/libqt5serialport5_5.4.1-1_amd64.deb
  - sudo apt-get install -f
  - sudo dpkg -i Dependencies/libqt5serialport5-dev_5.4.1-1_amd64.deb
  - sudo apt-get install -f
-
-install: true
-
 script: 
  - qmake -project
  - qmake SolarCarHostTelemetry.pro
