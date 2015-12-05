@@ -7,11 +7,8 @@ before_install:
  - sudo apt-get install qt5-default qttools5-dev-tools libqt5core5a libudev1
 
 install:
- - sudo dpkg --configure -a 
- - sudo dpkg -i Dependencies/libqt5serialport5_5.4.1-1_amd64.deb
- - sudo apt-get install -f
- - sudo dpkg -i Dependencies/libqt5serialport5-dev_5.4.1-1_amd64.deb
- - sudo apt-get install -f
+ - chmod +x installQTSerialPort.sh
+ - ./installQTSerialPort.sh
 script: 
  - qmake -project
  - qmake SolarCarHostTelemetry.pro
