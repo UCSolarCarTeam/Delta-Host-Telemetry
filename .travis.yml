@@ -10,7 +10,7 @@ install: true
 
 script: 
  - qmake -project
- - qmake SolarCarTelemetry.pro
+ - qmake SolarCarHostTelemetry.pro
  - make
 
 language: cpp
