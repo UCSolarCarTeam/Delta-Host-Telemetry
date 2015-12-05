@@ -6,6 +6,8 @@ before_install:
  - sudo apt-get install qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev
  - sudo apt-get install qt5-default qttools5-dev-tools
  - sudo dpkg --configure -a
+ - sudo dpkg -i Dependencies/libc6_2.21-0ubuntu4_amd64.deb
+ - sudo apt-get install -f
  - sudo dpkg -i Dependencies/libudev1_219-7ubuntu3_amd64.deb
  - sudo apt-get install -f
  - sudo dpkg -i Dependencies/libqt5core5a_5.4.1+dfsg-2ubuntu4.1_amd64.deb
