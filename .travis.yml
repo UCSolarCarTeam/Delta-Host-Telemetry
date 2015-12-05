@@ -9,8 +9,8 @@ before_install:
 install:
 
 script: 
- - qmake -project
- - qmake SolarCarHostTelemetry.pro
+ - qmake -qt=qt5 -project
+ - qmake -qt=qt5 SolarCarHostTelemetry.pro
  - make
 
 language: cpp
