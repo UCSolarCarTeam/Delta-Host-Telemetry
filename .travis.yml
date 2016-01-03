@@ -9,8 +9,7 @@ before_install:
     - qt54-env.sh 
 
 script: 
-    - qmake -project
-    - qmake SolarCarHostTelemetry.pro
+    - qmake
     - make
 
 language: cpp
